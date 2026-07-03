@@ -4,8 +4,8 @@ import process from "process";
 import path from "path";
 import glob from "fast-glob";
 import fetch, { Headers, Request, Response } from "node-fetch";
-import loadTaplo from "../../../crates/taplo-wasm/Cargo.toml";
-import { convertEnv, Environment, prepareEnv } from "@taplo/core";
+import loadTaplo from "../../../crates/olpat-wasm/Cargo.toml";
+import { convertEnv, Environment, prepareEnv } from "@olpat/core";
 
 (async function main() {
   const taplo = await loadTaplo();

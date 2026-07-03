@@ -1461,6 +1461,157 @@ dependencies = [
 ]
 
 [[package]]
+name = "olpat"
+version = "0.14.0"
+dependencies = [
+ "ahash",
+ "arc-swap",
+ "assert-json-diff",
+ "criterion",
+ "difference",
+ "either",
+ "globset",
+ "itertools",
+ "logos",
+ "once_cell",
+ "pprof",
+ "rowan",
+ "schemars",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "time",
+ "toml",
+ "tracing",
+]
+
+[[package]]
+name = "olpat-cli"
+version = "0.10.0"
+dependencies = [
+ "ansi_term",
+ "anyhow",
+ "async-ctrlc",
+ "clap",
+ "clap_complete",
+ "codespan-reporting",
+ "futures",
+ "glob",
+ "hex",
+ "itertools",
+ "lsp-async-stub",
+ "olpat",
+ "olpat-common",
+ "olpat-lsp",
+ "once_cell",
+ "prettydiff",
+ "regex",
+ "reqwest",
+ "schemars",
+ "serde",
+ "serde_json",
+ "time",
+ "tokio",
+ "toml",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+]
+
+[[package]]
+name = "olpat-common"
+version = "0.6.0"
+dependencies = [
+ "ahash",
+ "anyhow",
+ "arc-swap",
+ "async-recursion",
+ "async-trait",
+ "futures",
+ "glob",
+ "globset",
+ "hex",
+ "indexmap",
+ "itertools",
+ "json_value_merge",
+ "jsonschema",
+ "lru",
+ "olpat",
+ "parking_lot",
+ "percent-encoding",
+ "regex",
+ "reqwest",
+ "schemars",
+ "semver",
+ "serde",
+ "serde_json",
+ "sha1",
+ "tap",
+ "thiserror",
+ "time",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+]
+
+[[package]]
+name = "olpat-lsp"
+version = "0.8.0"
+dependencies = [
+ "anyhow",
+ "arc-swap",
+ "either",
+ "figment",
+ "futures",
+ "indexmap",
+ "itertools",
+ "lsp-async-stub",
+ "lsp-types",
+ "olpat",
+ "olpat-common",
+ "once_cell",
+ "parking_lot",
+ "regex",
+ "reqwest",
+ "schemars",
+ "serde",
+ "serde_json",
+ "tap",
+ "time",
+ "toml",
+ "tracing",
+]
+
+[[package]]
+name = "olpat-wasm"
+version = "0.2.1"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "clap",
+ "console_error_panic_hook",
+ "futures",
+ "getrandom",
+ "indexmap",
+ "js-sys",
+ "lsp-async-stub",
+ "olpat",
+ "olpat-cli",
+ "olpat-common",
+ "olpat-lsp",
+ "serde",
+ "serde-wasm-bindgen",
+ "serde_json",
+ "time",
+ "tokio",
+ "tracing",
+ "url",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+]
+
+[[package]]
 name = "once_cell"
 version = "1.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2225,157 +2376,6 @@ name = "tap"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
-
-[[package]]
-name = "taplo"
-version = "0.14.0"
-dependencies = [
- "ahash",
- "arc-swap",
- "assert-json-diff",
- "criterion",
- "difference",
- "either",
- "globset",
- "itertools",
- "logos",
- "once_cell",
- "pprof",
- "rowan",
- "schemars",
- "serde",
- "serde_json",
- "thiserror",
- "time",
- "toml",
- "tracing",
-]
-
-[[package]]
-name = "taplo-cli"
-version = "0.10.0"
-dependencies = [
- "ansi_term",
- "anyhow",
- "async-ctrlc",
- "clap",
- "clap_complete",
- "codespan-reporting",
- "futures",
- "glob",
- "hex",
- "itertools",
- "lsp-async-stub",
- "once_cell",
- "prettydiff",
- "regex",
- "reqwest",
- "schemars",
- "serde",
- "serde_json",
- "taplo",
- "taplo-common",
- "taplo-lsp",
- "time",
- "tokio",
- "toml",
- "tracing",
- "tracing-subscriber",
- "url",
-]
-
-[[package]]
-name = "taplo-common"
-version = "0.6.0"
-dependencies = [
- "ahash",
- "anyhow",
- "arc-swap",
- "async-recursion",
- "async-trait",
- "futures",
- "glob",
- "globset",
- "hex",
- "indexmap",
- "itertools",
- "json_value_merge",
- "jsonschema",
- "lru",
- "parking_lot",
- "percent-encoding",
- "regex",
- "reqwest",
- "schemars",
- "semver",
- "serde",
- "serde_json",
- "sha1",
- "tap",
- "taplo",
- "thiserror",
- "time",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "url",
-]
-
-[[package]]
-name = "taplo-lsp"
-version = "0.8.0"
-dependencies = [
- "anyhow",
- "arc-swap",
- "either",
- "figment",
- "futures",
- "indexmap",
- "itertools",
- "lsp-async-stub",
- "lsp-types",
- "once_cell",
- "parking_lot",
- "regex",
- "reqwest",
- "schemars",
- "serde",
- "serde_json",
- "tap",
- "taplo",
- "taplo-common",
- "time",
- "toml",
- "tracing",
-]
-
-[[package]]
-name = "taplo-wasm"
-version = "0.2.1"
-dependencies = [
- "anyhow",
- "async-trait",
- "clap",
- "console_error_panic_hook",
- "futures",
- "getrandom",
- "indexmap",
- "js-sys",
- "lsp-async-stub",
- "serde",
- "serde-wasm-bindgen",
- "serde_json",
- "taplo",
- "taplo-cli",
- "taplo-common",
- "taplo-lsp",
- "time",
- "tokio",
- "tracing",
- "url",
- "wasm-bindgen",
- "wasm-bindgen-futures",
-]
 
 [[package]]
 name = "tempfile"

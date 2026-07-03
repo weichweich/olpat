@@ -91,7 +91,7 @@ cargo build \
   --frozen \
   --release \
   --target "$(xx-cargo --print-target-triple)" \
-  --package taplo-cli
+  --package olpat-cli
 
 maturin build \
   --verbose \
@@ -106,19 +106,19 @@ if ! xx-info is-cross; then
     --out /maturin
 fi
 
-xx-verify "${CARGO_TARGET_DIR}"/"$(xx-cargo --print-target-triple)"/release/taplo
+xx-verify "${CARGO_TARGET_DIR}"/"$(xx-cargo --print-target-triple)"/release/olpat
 
-cp -v "${CARGO_TARGET_DIR}"/"$(xx-cargo --print-target-triple)"/release/taplo /usr/local/bin/taplo
+cp -v "${CARGO_TARGET_DIR}"/"$(xx-cargo --print-target-triple)"/release/olpat /usr/local/bin/olpat
 
 EOF
 
 FROM scratch AS binary
-COPY --from=build /usr/local/bin/taplo .
+COPY --from=build /usr/local/bin/olpat .
 COPY --from=build /maturin .
 
 FROM scratch AS oci
-COPY --from=build /usr/local/bin/taplo /bin/taplo
-ENTRYPOINT [ "/bin/taplo" ]
+COPY --from=build /usr/local/bin/olpat /bin/olpat
+ENTRYPOINT [ "/bin/olpat" ]
 
 FROM alpine:3 AS shell
 RUN apk add -U busybox-static

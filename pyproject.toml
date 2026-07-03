@@ -3,8 +3,8 @@ requires      = ["maturin>=1.4"]
 build-backend = "maturin"
 
 [project]
-name            = "taplo"
-description     = "A CLI for Taplo TOML toolkit"
+name            = "olpat"
+description     = "A CLI for the olpat TOML toolkit (a maintained fork of taplo)"
 authors         = [{ name = "tamasfe" }]
 maintainers     = [{ name = "Jakub Panek" }]
 requires-python = ">=3.8"
@@ -35,12 +35,12 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage      = "https://taplo.tamasfe.dev"
+Homepage      = "https://github.com/weichweich/olpat"
 Documentation = "https://taplo.tamasfe.dev/cli/introduction.html"
-Repository    = "https://github.com/tamasfe/taplo.git"
-Tracker       = "https://github.com/tamasfe/taplo/issues"
-Changelog     = "https://github.com/tamasfe/taplo/blob/master/crates/taplo-cli/CHANGELOG.md"
+Repository    = "https://github.com/weichweich/olpat.git"
+Tracker       = "https://github.com/weichweich/olpat/issues"
+Changelog     = "https://github.com/weichweich/olpat/blob/master/crates/olpat-cli/CHANGELOG.md"
 
 [tool.maturin]
 bindings      = "bin"
-manifest-path = "crates/taplo-cli/Cargo.toml"
+manifest-path = "crates/olpat-cli/Cargo.toml"

@@ -9,8 +9,8 @@ authors      = ["tamasfe"]
 edition      = "2021"
 license      = "MIT"
 rust-version = "1.74"
-homepage     = "https://taplo.tamasfe.dev"
-repository   = "https://github.com/tamasfe/taplo"
+homepage     = "https://github.com/weichweich/olpat"
+repository   = "https://github.com/weichweich/olpat"
 
 [workspace.dependencies]
 ahash              = { version = "0.8.4" }

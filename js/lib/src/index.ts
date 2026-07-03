@@ -4,8 +4,8 @@ import {
   Environment,
   FormatterOptions,
   prepareEnv,
-} from "@taplo/core";
-import loadTaplo from "../../../crates/taplo-wasm/Cargo.toml";
+} from "@olpat/core";
+import loadTaplo from "../../../crates/olpat-wasm/Cargo.toml";
 import { objectCamel } from "./util";
 
 /**

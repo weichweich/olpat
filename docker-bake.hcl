@@ -11,7 +11,7 @@ variable "RELEASE_TAG" {
 }
 
 variable "REPO" {
-  default = "tamasfe/taplo"
+  default = "weichweich/olpat"
 }
 
 variable "PUSH" {

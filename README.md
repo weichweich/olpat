@@ -1,25 +1,27 @@
 <div style="text-align:left"><img src="taplo-icon.png" width="128"></div>
 
-[![Continuous integration](https://github.com/tamasfe/taplo/workflows/Continuous%20integration/badge.svg)](https://github.com/tamasfe/taplo/actions?query=workflow%3A%22Continuous+integration%22)
-[![Latest Version](https://img.shields.io/crates/v/taplo.svg)](https://crates.io/crates/taplo)
-[![Documentation](https://docs.rs/taplo/badge.svg)](https://docs.rs/taplo)
+[![Continuous integration](https://github.com/weichweich/olpat/workflows/Continuous%20integration/badge.svg)](https://github.com/weichweich/olpat/actions?query=workflow%3A%22Continuous+integration%22)
 
-[**Website**](https://taplo.tamasfe.dev)
+# olpat
 
-# Taplo
+**olpat** is a maintained fork of [taplo](https://github.com/tamasfe/taplo), a TOML v1.0.0 toolkit.
 
-This is the repository for Taplo, a TOML v1.0.0 toolkit, more details on the [website](https://taplo.tamasfe.dev).
+> **Note**
+> This project is a fork of [taplo](https://github.com/tamasfe/taplo), which is no longer actively developed.
+> olpat exists to keep the toolkit maintained and usable: it receives bug fixes and dependency
+> updates, but it is **not actively developed** and no new features are planned.
+> For background and documentation on how the tooling works, see the original taplo
+> [website](https://taplo.tamasfe.dev) and [repository](https://github.com/tamasfe/taplo).
 
-
-- [Taplo](#taplo)
+- [olpat](#olpat)
   - [Status](#status)
   - [Contributing](#contributing)
 
 ## Status
 
-The project is very young, so bugs and incomplete features are expected, so [any help is welcome](CONTRIBUTING.md)!
+olpat is a maintenance fork. Bug fixes and dependency updates are welcome, but new features are out of scope for now, so [any help with maintenance is welcome](CONTRIBUTING.md)!
 
-The correctness of the TOML parsing and decoding is not yet entirely guaranteed (as there is no official 1.0.0 compliance test suite yet).
+The correctness of the TOML parsing and decoding is inherited from taplo and is not entirely guaranteed (as there is no official 1.0.0 compliance test suite yet).
 
 ## Contributing
 

@@ -2,7 +2,7 @@ import fs from "fs";
 import fsPromise from "fs/promises";
 import path from "path";
 import { exit } from "process";
-import { RpcMessage, TaploLsp } from "@taplo/lsp";
+import { RpcMessage, TaploLsp } from "@olpat/lsp";
 import fetch, { Headers, Request, Response } from "node-fetch";
 import glob from "fast-glob";
 

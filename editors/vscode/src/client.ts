@@ -63,7 +63,7 @@ async function createNodeClient(context: vscode.ExtensionContext) {
   } else {
     const taploPath =
       vscode.workspace.getConfiguration().get("evenBetterToml.taplo.path") ??
-      which.sync("taplo", { nothrow: true });
+      which.sync("olpat", { nothrow: true });
 
     if (typeof taploPath !== "string") {
       out.appendLine("failed to locate Taplo LSP");

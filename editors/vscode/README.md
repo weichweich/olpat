@@ -2,7 +2,7 @@
 
 A TOML language support extension backed by [Taplo](https://taplo.tamasfe.dev).
 
-It is currently a **preview extension**, it might contain bugs, or might even crash. If you encounter any issues, please report them [on github](https://github.com/tamasfe/taplo/issues).
+It is currently a **preview extension**, it might contain bugs, or might even crash. If you encounter any issues, please report them [on github](https://github.com/weichweich/olpat/issues).
 
 - [Features](#features)
   - [TOML version 1.0.0 support](#toml-version-100-support)

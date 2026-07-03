@@ -1,5 +1,5 @@
-import loadTaplo from "../../../crates/taplo-wasm/Cargo.toml";
-import { convertEnv, Environment, Lsp, prepareEnv } from "@taplo/core";
+import loadTaplo from "../../../crates/olpat-wasm/Cargo.toml";
+import { convertEnv, Environment, Lsp, prepareEnv } from "@olpat/core";
 
 export interface RpcMessage {
   jsonrpc: "2.0";

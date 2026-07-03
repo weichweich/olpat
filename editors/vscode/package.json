@@ -7,12 +7,12 @@
     "enabled": true
   },
   "repository": {
-    "url": "https://github.com/tamasfe/taplo"
+    "url": "https://github.com/weichweich/olpat"
   },
   "bugs": {
-    "url": "https://github.com/tamasfe/taplo/issues"
+    "url": "https://github.com/weichweich/olpat/issues"
   },
-  "publisher": "tamasfe",
+  "publisher": "weichweich",
   "author": {
     "name": "tamasfe"
   },
@@ -406,7 +406,7 @@
     "build": "node scripts/build.mjs"
   },
   "dependencies": {
-    "@taplo/lsp": "^0.8.0",
+    "@olpat/lsp": "^0.8.0",
     "deep-equal": "^2.2.3",
     "encoding": "^0.1.13",
     "fast-glob": "^3.3.2",
