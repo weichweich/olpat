@@ -24,8 +24,8 @@ async function createBrowserClient(context: vscode.ExtensionContext) {
   );
   const worker = new Worker(serverMain.toString(true));
   return new browser.LanguageClient(
-    "taplo-lsp",
-    "Taplo LSP",
+    "olpat-lsp",
+    "Olpat LSP",
     await clientOpts(context),
     worker
   );
@@ -36,7 +36,7 @@ async function createNodeClient(context: vscode.ExtensionContext) {
 
   const bundled = !!vscode.workspace
     .getConfiguration()
-    .get("evenBetterToml.taplo.bundled");
+    .get("olpat-ext.olpat.bundled");
 
   let serverOpts: node.ServerOptions;
   if (bundled) {
@@ -52,7 +52,7 @@ async function createNodeClient(context: vscode.ExtensionContext) {
         env:
           vscode.workspace
             .getConfiguration()
-            .get("evenBetterToml.taplo.environment") ?? undefined,
+            .get("olpat-ext.olpat.environment") ?? undefined,
       },
     };
 
@@ -62,17 +62,17 @@ async function createNodeClient(context: vscode.ExtensionContext) {
     };
   } else {
     const taploPath =
-      vscode.workspace.getConfiguration().get("evenBetterToml.taplo.path") ??
+      vscode.workspace.getConfiguration().get("olpat-ext.olpat.path") ??
       which.sync("olpat", { nothrow: true });
 
     if (typeof taploPath !== "string") {
-      out.appendLine("failed to locate Taplo LSP");
-      throw new Error("failed to locate Taplo LSP");
+      out.appendLine("failed to locate Olpat LSP");
+      throw new Error("failed to locate Olpat LSP");
     }
 
     let extraArgs = vscode.workspace
       .getConfiguration()
-      .get("evenBetterToml.taplo.extraArgs");
+      .get("olpat-ext.olpat.extraArgs");
 
     if (!Array.isArray(extraArgs)) {
       extraArgs = [];
@@ -89,7 +89,7 @@ async function createNodeClient(context: vscode.ExtensionContext) {
         env:
           vscode.workspace
             .getConfiguration()
-            .get("evenBetterToml.taplo.environment") ?? undefined,
+            .get("olpat-ext.olpat.environment") ?? undefined,
       },
     };
 
@@ -100,8 +100,8 @@ async function createNodeClient(context: vscode.ExtensionContext) {
   }
 
   return new node.LanguageClient(
-    "evenBetterToml",
-    "Even Better TOML LSP",
+    "olpat-ext",
+    "Olpat LSP",
     serverOpts,
     await clientOpts(context)
   );
@@ -117,7 +117,7 @@ async function clientOpts(context: vscode.ExtensionContext): Promise<any> {
     ],
 
     initializationOptions: {
-      configurationSection: "evenBetterToml",
+      configurationSection: "olpat-ext",
       cachePath: context.globalStorageUri.fsPath,
     },
   };

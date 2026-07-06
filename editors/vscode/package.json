@@ -1,7 +1,7 @@
 {
-  "name": "even-better-toml",
-  "displayName": "Even Better TOML",
-  "description": "Fully-featured TOML support",
+  "name": "olpat-ext",
+  "displayName": "Olpat",
+  "description": "TOML support",
   "version": "0.21.2",
   "autoTag": {
     "enabled": true
@@ -14,10 +14,10 @@
   },
   "publisher": "weichweich",
   "author": {
-    "name": "tamasfe"
+    "name": "weichweich"
   },
   "preview": true,
-  "icon": "taplo-icon.png",
+  "icon": "olpat-icon.png",
   "galleryBanner": {
     "color": "#731c12",
     "theme": "dark"
@@ -89,44 +89,44 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "evenBetterToml.selectSchema",
+          "command": "olpat-ext.selectSchema",
           "when": "editorLangId == toml"
         },
         {
-          "command": "evenBetterToml.copyAsJson"
+          "command": "olpat-ext.copyAsJson"
         },
         {
-          "command": "evenBetterToml.copyAsToml"
+          "command": "olpat-ext.copyAsToml"
         },
         {
-          "command": "evenBetterToml.pasteAsJson"
+          "command": "olpat-ext.pasteAsJson"
         },
         {
-          "command": "evenBetterToml.pasteAsToml"
+          "command": "olpat-ext.pasteAsToml"
         }
       ]
     },
     "commands": [
       {
-        "command": "evenBetterToml.selectSchema",
+        "command": "olpat-ext.selectSchema",
         "title": "TOML: Select Schema"
       },
       {
-        "command": "evenBetterToml.copyAsJson",
+        "command": "olpat-ext.copyAsJson",
         "title": "TOML: Copy as JSON",
         "enablement": "editorHasSelection"
       },
       {
-        "command": "evenBetterToml.copyAsToml",
+        "command": "olpat-ext.copyAsToml",
         "title": "TOML: Copy as TOML",
         "enablement": "editorHasSelection"
       },
       {
-        "command": "evenBetterToml.pasteAsJson",
+        "command": "olpat-ext.pasteAsJson",
         "title": "TOML: Paste as JSON"
       },
       {
-        "command": "evenBetterToml.pasteAsToml",
+        "command": "olpat-ext.pasteAsToml",
         "title": "TOML: Paste as TOML"
       }
     ],
@@ -155,16 +155,16 @@
       }
     ],
     "configuration": {
-      "title": "Even Better TOML",
+      "title": "Olpat",
       "properties": {
-        "evenBetterToml.taplo.bundled": {
-          "description": "Use the bundled taplo language server. If set to `false`, the `taplo` executable must be found in PATH or must be set in `evenBetterToml.taplo.path`.",
+        "olpat-ext.olpat.bundled": {
+          "description": "Use the bundled olpat language server. If set to `false`, the `olpat` executable must be found in PATH or must be set in `olpat-ext.olpat.path`.",
           "type": "boolean",
           "scope": "resource",
           "default": true
         },
-        "evenBetterToml.taplo.path": {
-          "description": "An absolute path to the `taplo` executable. `evenBetterToml.taplo.bundled` needs to be set to `false` for this to have any effect.",
+        "olpat-ext.olpat.path": {
+          "description": "An absolute path to the `olpat` executable. `olpat-ext.olpat.bundled` needs to be set to `false` for this to have any effect.",
           "type": [
             "string",
             "null"
@@ -172,60 +172,60 @@
           "scope": "resource",
           "default": null
         },
-        "evenBetterToml.taplo.environment": {
+        "olpat-ext.olpat.environment": {
           "type": [
             "object"
           ],
           "scope": "resource",
-          "description": "Environment variables for Taplo.",
+          "description": "Environment variables for olpat.",
           "additionalProperties": {
             "type": "string"
           },
           "default": {}
         },
-        "evenBetterToml.taplo.extraArgs": {
+        "olpat-ext.olpat.extraArgs": {
           "type": [
             "array",
             "null"
           ],
           "scope": "resource",
-          "description": "Additional arguments for Taplo. Has no effect for the bundled LSP.",
+          "description": "Additional arguments for olpat. Has no effect for the bundled LSP.",
           "items": {
             "type": "string"
           },
           "default": []
         },
-        "evenBetterToml.taplo.configFile.path": {
-          "description": "An absolute, or workspace relative path to the Taplo configuration file.",
+        "olpat-ext.olpat.configFile.path": {
+          "description": "An absolute, or workspace relative path to the olpat configuration file.",
           "type": "string",
           "default": null,
           "scope": "resource"
         },
-        "evenBetterToml.taplo.configFile.enabled": {
-          "description": "Whether to enable the usage of a Taplo configuration file.",
+        "olpat-ext.olpat.configFile.enabled": {
+          "description": "Whether to enable the usage of a olpat configuration file.",
           "type": "boolean",
           "scope": "resource",
           "default": true
         },
-        "evenBetterToml.semanticTokens": {
+        "olpat-ext.semanticTokens": {
           "description": "Enable semantic tokens for inline table and array keys.",
           "type": "boolean",
           "scope": "resource",
           "default": false
         },
-        "evenBetterToml.schema.enabled": {
+        "olpat-ext.schema.enabled": {
           "description": "Enable completion and validation based on JSON schemas.",
           "type": "boolean",
           "scope": "resource",
           "default": true
         },
-        "evenBetterToml.schema.links": {
+        "olpat-ext.schema.links": {
           "description": "Whether to show clickable links for keys in the editor.",
           "type": "boolean",
           "scope": "resource",
           "default": false
         },
-        "evenBetterToml.schema.catalogs": {
+        "olpat-ext.schema.catalogs": {
           "description": "A list of URLs to schema catalogs where schemas and associations can be fetched from",
           "type": "array",
           "scope": "resource",
@@ -236,14 +236,14 @@
             "https://www.schemastore.org/api/json/catalog.json"
           ]
         },
-        "evenBetterToml.schema.associations": {
+        "olpat-ext.schema.associations": {
           "description": "Document and schema associations.",
-          "markdownDescription": "Additional document and schema associations. \n\n The key must be a regular expression, this pattern is used to associate schemas with absolute document URIs. Overlapping patterns result in undefined behaviour and either matching schema can be used. \n\n The value must be an absolute URI to the JSON schema, for supported values and more information [read here](https://taplo.tamasfe.dev/configuration#visual-studio-code).",
+          "markdownDescription": "Additional document and schema associations. \n\n The key must be a regular expression, this pattern is used to associate schemas with absolute document URIs. Overlapping patterns result in undefined behaviour and either matching schema can be used. \n\n The value must be an absolute URI to the JSON schema, for supported values and more information [read here](https://olpat.eu/configuration#visual-studio-code).",
           "type": "object",
           "scope": "resource",
           "default": {}
         },
-        "evenBetterToml.schema.cache.memoryExpiration": {
+        "olpat-ext.schema.cache.memoryExpiration": {
           "description": "The amount of seconds after which schemas will be invalidated from memory.",
           "markdownDescription": "The amount of seconds after which schemas will be invalidated from memory. \n**NOTE**: setting too low values will cause performance issues and validation of some schemas will fail.",
           "type": "integer",
@@ -251,145 +251,145 @@
           "minimum": 0,
           "default": 60
         },
-        "evenBetterToml.schema.cache.diskExpiration": {
+        "olpat-ext.schema.cache.diskExpiration": {
           "description": "The amount of seconds after which cached catalogs and schemas expire and will be attempted to be fetched again.",
           "type": "integer",
           "scope": "resource",
           "minimum": 0,
           "default": 600
         },
-        "evenBetterToml.completion.maxKeys": {
+        "olpat-ext.completion.maxKeys": {
           "description": "The maximum amount of keys in a dotted key to display during completion, 0 effectively disables key completions.",
           "type": "integer",
           "scope": "resource",
           "minimum": 0,
           "default": 5
         },
-        "evenBetterToml.syntax.semanticTokens": {
+        "olpat-ext.syntax.semanticTokens": {
           "description": "Whether to enable semantic tokens for tables and arrays.",
           "type": "boolean",
           "scope": "resource",
           "default": true
         },
-        "evenBetterToml.formatter.alignEntries": {
+        "olpat-ext.formatter.alignEntries": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Align entries vertically. Entries that have table headers, comments, or blank lines between them are not aligned."
         },
-        "evenBetterToml.formatter.alignComments": {
+        "olpat-ext.formatter.alignComments": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Align consecutive comments after entries and items vertically. This applies to comments that are after entries or array items"
         },
-        "evenBetterToml.formatter.arrayTrailingComma": {
+        "olpat-ext.formatter.arrayTrailingComma": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Put trailing commas for multiline arrays."
         },
-        "evenBetterToml.formatter.arrayAutoExpand": {
+        "olpat-ext.formatter.arrayAutoExpand": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Automatically expand arrays to multiple lines."
         },
-        "evenBetterToml.formatter.inlineTableExpand": {
+        "olpat-ext.formatter.inlineTableExpand": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Expand values inside in line tables."
         },
-        "evenBetterToml.formatter.arrayAutoCollapse": {
+        "olpat-ext.formatter.arrayAutoCollapse": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Automatically collapse arrays if they fit in one line."
         },
-        "evenBetterToml.formatter.compactArrays": {
+        "olpat-ext.formatter.compactArrays": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Omit whitespace padding inside single-line arrays."
         },
-        "evenBetterToml.formatter.compactInlineTables": {
+        "olpat-ext.formatter.compactInlineTables": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Omit whitespace padding inside inline tables."
         },
-        "evenBetterToml.formatter.compactEntries": {
+        "olpat-ext.formatter.compactEntries": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Omit whitespace around `=`."
         },
-        "evenBetterToml.formatter.columnWidth": {
+        "olpat-ext.formatter.columnWidth": {
           "scope": "resource",
           "type": "number",
           "default": null,
           "description": "Target maximum column width after which arrays are expanded into new lines."
         },
-        "evenBetterToml.formatter.indentTables": {
+        "olpat-ext.formatter.indentTables": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Indent subtables if they come in order."
         },
-        "evenBetterToml.formatter.indentEntries": {
+        "olpat-ext.formatter.indentEntries": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Indent entries under tables."
         },
-        "evenBetterToml.formatter.indentString": {
+        "olpat-ext.formatter.indentString": {
           "scope": "resource",
           "type": "string",
           "default": null,
           "description": "Indentation to use, should be tabs or spaces but technically could be anything."
         },
-        "evenBetterToml.formatter.trailingNewline": {
+        "olpat-ext.formatter.trailingNewline": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Add trailing newline to the source."
         },
-        "evenBetterToml.formatter.reorderKeys": {
+        "olpat-ext.formatter.reorderKeys": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Alphabetically reorder keys that are not separated by blank lines."
         },
-        "evenBetterToml.formatter.reorderArrays": {
+        "olpat-ext.formatter.reorderArrays": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Alphabetically reorder array values that are not separated by blank lines."
         },
-        "evenBetterToml.formatter.reorderInlineTables": {
+        "olpat-ext.formatter.reorderInlineTables": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Alphabetically reorder inline tables."
         },
-        "evenBetterToml.formatter.allowedBlankLines": {
+        "olpat-ext.formatter.allowedBlankLines": {
           "scope": "resource",
           "type": "number",
           "default": null,
           "description": "The maximum amount of consecutive blank lines allowed."
         },
-        "evenBetterToml.formatter.crlf": {
+        "olpat-ext.formatter.crlf": {
           "scope": "resource",
           "type": "boolean",
           "default": null,
           "description": "Use CRLF line endings."
         },
-        "evenBetterToml.rules": {
+        "olpat-ext.rules": {
           "scope": "resource",
           "type": "array",
           "default": [],
-          "markdownDescription": "Array of Taplo rules in JSON format, see [Configuration File - Rules](https://taplo.tamasfe.dev/configuration/file.html#rules). The rules given here are appended to existing rules from config files, if any. There is no conversion done, all object keys must be snake_case, including formatting rules."
+          "markdownDescription": "Array of olpat rules in JSON format, see [Configuration File - Rules](https://olpat.eu/configuration/file.html#rules). The rules given here are appended to existing rules from config files, if any. There is no conversion done, all object keys must be snake_case, including formatting rules."
         }
       }
     }

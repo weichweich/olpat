@@ -6,7 +6,7 @@ import { BaseLanguageClient } from "vscode-languageclient";
 export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
   ctx.subscriptions.push(
     vscode.commands.registerTextEditorCommand(
-      "evenBetterToml.copyAsJson",
+      "olpat-ext.copyAsJson",
       async editor => {
         const document = editor?.document;
         // Avoid accidental copying of nothing
@@ -74,7 +74,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
       }
     ),
     vscode.commands.registerTextEditorCommand(
-      "evenBetterToml.copyAsToml",
+      "olpat-ext.copyAsToml",
       async editor => {
         const document = editor?.document;
         // Avoid accidental copying of nothing
@@ -142,7 +142,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
       }
     ),
     vscode.commands.registerTextEditorCommand(
-      "evenBetterToml.pasteAsJson",
+      "olpat-ext.pasteAsJson",
       async editor => {
         const out = getOutput();
         let input: string;
@@ -188,7 +188,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
       }
     ),
     vscode.commands.registerTextEditorCommand(
-      "evenBetterToml.pasteAsToml",
+      "olpat-ext.pasteAsToml",
       async editor => {
         const out = getOutput();
         let input: string;
