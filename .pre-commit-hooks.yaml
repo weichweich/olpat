@@ -1,0 +1,23 @@
+---
+- id: olpat-format
+  alias: olpat
+  name: olpat-format
+  description: Format TOML documents
+  entry: olpat format
+  language: python
+  types: [toml]
+  args: []
+  require_serial: false
+  additional_dependencies: ["olpat"]
+  minimum_pre_commit_version: "0"
+
+- id: olpat-lint
+  name: olpat-lint
+  description: Lint TOML documents
+  entry: olpat lint
+  language: python
+  types: [toml]
+  args: [--default-schema-catalogs]
+  require_serial: false
+  additional_dependencies: ["olpat"]
+  minimum_pre_commit_version: "0"
