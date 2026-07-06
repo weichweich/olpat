@@ -1193,22 +1193,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "lsp-async-stub"
-version = "0.7.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "futures",
- "getrandom",
- "lsp-types",
- "rowan",
- "serde",
- "serde_json",
- "tokio",
- "tracing",
-]
-
-[[package]]
 name = "lsp-types"
 version = "0.93.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1499,10 +1483,10 @@ dependencies = [
  "glob",
  "hex",
  "itertools",
- "lsp-async-stub",
  "olpat",
  "olpat-common",
  "olpat-lsp",
+ "olpat-lsp-async-stub",
  "once_cell",
  "prettydiff",
  "regex",
@@ -1566,10 +1550,10 @@ dependencies = [
  "futures",
  "indexmap",
  "itertools",
- "lsp-async-stub",
  "lsp-types",
  "olpat",
  "olpat-common",
+ "olpat-lsp-async-stub",
  "once_cell",
  "parking_lot",
  "regex",
@@ -1580,6 +1564,22 @@ dependencies = [
  "tap",
  "time",
  "toml",
+ "tracing",
+]
+
+[[package]]
+name = "olpat-lsp-async-stub"
+version = "0.7.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "futures",
+ "getrandom",
+ "lsp-types",
+ "rowan",
+ "serde",
+ "serde_json",
+ "tokio",
  "tracing",
 ]
 
@@ -1595,11 +1595,11 @@ dependencies = [
  "getrandom",
  "indexmap",
  "js-sys",
- "lsp-async-stub",
  "olpat",
  "olpat-cli",
  "olpat-common",
  "olpat-lsp",
+ "olpat-lsp-async-stub",
  "serde",
  "serde-wasm-bindgen",
  "serde_json",

@@ -1,4 +1,4 @@
-use lsp_async_stub::{util::Mapper, Context, Params, RequestWriter};
+use olpat_lsp_async_stub::{util::Mapper, Context, Params, RequestWriter};
 use lsp_types::{
     notification, Diagnostic, DiagnosticSeverity, DidChangeTextDocumentParams,
     DidCloseTextDocumentParams, DidOpenTextDocumentParams, DidSaveTextDocumentParams,

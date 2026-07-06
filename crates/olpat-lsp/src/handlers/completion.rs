@@ -1,4 +1,4 @@
-use lsp_async_stub::{
+use olpat_lsp_async_stub::{
     rpc::Error,
     util::{LspExt, Position},
     Context, Params,
@@ -362,7 +362,7 @@ pub async fn completion<E: Environment>(
                 .entry_value()
                 .map(|k| k.text_range())
                 .and_then(|r| doc.mapper.range(r))
-                .map(lsp_async_stub::util::LspExt::into_lsp)
+                .map(olpat_lsp_async_stub::util::LspExt::into_lsp)
         };
 
         let mut completions = Vec::new();

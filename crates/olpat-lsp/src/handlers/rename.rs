@@ -1,8 +1,8 @@
 use crate::query::{lookup_keys, Query};
 use crate::world::World;
-use lsp_async_stub::rpc::Error;
-use lsp_async_stub::util::{LspExt, Position};
-use lsp_async_stub::{Context, Params};
+use olpat_lsp_async_stub::rpc::Error;
+use olpat_lsp_async_stub::util::{LspExt, Position};
+use olpat_lsp_async_stub::{Context, Params};
 use lsp_types::{
     PrepareRenameResponse, RenameParams, TextDocumentPositionParams, TextEdit, WorkspaceEdit,
 };

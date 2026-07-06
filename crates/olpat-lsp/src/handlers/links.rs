@@ -1,7 +1,7 @@
 use crate::world::World;
-use lsp_async_stub::rpc::Error;
-use lsp_async_stub::util::LspExt;
-use lsp_async_stub::{Context, Params};
+use olpat_lsp_async_stub::rpc::Error;
+use olpat_lsp_async_stub::util::LspExt;
+use olpat_lsp_async_stub::{Context, Params};
 use lsp_types::{DocumentLink, DocumentLinkParams, Url};
 use olpat::dom::KeyOrIndex;
 use olpat_common::environment::Environment;

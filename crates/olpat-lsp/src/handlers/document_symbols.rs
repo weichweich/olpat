@@ -1,5 +1,5 @@
 use crate::world::{DocumentState, World};
-use lsp_async_stub::{
+use olpat_lsp_async_stub::{
     rpc::Error,
     util::{LspExt, Mapper},
     Context, Params,

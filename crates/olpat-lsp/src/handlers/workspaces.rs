@@ -1,6 +1,6 @@
 use super::update_configuration;
 use crate::world::{WorkspaceState, World};
-use lsp_async_stub::{Context, Params};
+use olpat_lsp_async_stub::{Context, Params};
 use lsp_types::DidChangeWorkspaceFoldersParams;
 use olpat_common::environment::Environment;
 

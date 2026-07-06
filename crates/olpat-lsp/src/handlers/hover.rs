@@ -3,7 +3,7 @@ use crate::{
     world::World,
 };
 use itertools::Itertools;
-use lsp_async_stub::{
+use olpat_lsp_async_stub::{
     rpc::Error,
     util::{LspExt, Position},
     Context, Params,

@@ -4,7 +4,7 @@ use super::{semantic_tokens, update_configuration};
 use crate::config::InitConfig;
 use crate::world::WorkspaceState;
 use crate::World;
-use lsp_async_stub::{rpc::Error, Context, Params};
+use olpat_lsp_async_stub::{rpc::Error, Context, Params};
 use lsp_types::{
     CompletionOptions, DocumentLinkOptions, FoldingRangeProviderCapability,
     HoverProviderCapability, InitializedParams, OneOf, RenameOptions, SemanticTokensFullOptions,

@@ -9,7 +9,7 @@ use crate::{
     },
     world::World,
 };
-use lsp_async_stub::{rpc::Error, Context, Params};
+use olpat_lsp_async_stub::{rpc::Error, Context, Params};
 use serde_json::json;
 use olpat_common::{
     environment::Environment,

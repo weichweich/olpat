@@ -1,5 +1,5 @@
 use crate::World;
-use lsp_async_stub::{
+use olpat_lsp_async_stub::{
     rpc::Error,
     util::{relative_range, LspExt, Mapper},
     Context, Params,
@@ -136,7 +136,7 @@ impl<'b> SemanticTokensBuilder<'b> {
 
         let relative = relative_range(
             range,
-            lsp_async_stub::util::Range::from_lsp(self.last_range.unwrap_or_default()),
+            olpat_lsp_async_stub::util::Range::from_lsp(self.last_range.unwrap_or_default()),
         );
 
         #[allow(clippy::cast_possible_truncation)]

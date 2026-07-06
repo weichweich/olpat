@@ -7,16 +7,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'lsp-async-stub'",
+            "name": "Debug unit tests in library 'olpat-lsp-async-stub'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=lsp-async-stub"
+                    "--package=olpat-lsp-async-stub"
                 ],
                 "filter": {
-                    "name": "lsp-async-stub",
+                    "name": "olpat-lsp-async-stub",
                     "kind": "lib"
                 }
             },
@@ -160,7 +160,7 @@
             "name": "Attach to executable 'taplo'",
             "pid": "${command:pickProcess}",
             "cwd": "${workspaceFolder}"
-        },        
+        },
         {
             "type": "lldb",
             "request": "launch",

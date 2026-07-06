@@ -45,7 +45,7 @@ tracing-subscriber = { workspace = true, features = ["env-filter"] }
 url                = { workspace = true }
 
 [target.'cfg(not(target_family = "wasm"))'.dependencies]
-lsp-async-stub = { version = "0.7.0", path = "../lsp-async-stub", features = ["tokio-tcp", "tokio-stdio"] }
+olpat-lsp-async-stub = { version = "0.7.0", path = "../olpat-lsp-async-stub", features = ["tokio-tcp", "tokio-stdio"] }
 
 ansi_term     = { version = "0.12" }
 async-ctrlc   = { version = "1.2.0", features = ["stream"], optional = true }

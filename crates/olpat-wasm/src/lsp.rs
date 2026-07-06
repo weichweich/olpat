@@ -1,7 +1,7 @@
 use crate::environment::WasmEnvironment;
 use futures::Sink;
 use js_sys::Function;
-use lsp_async_stub::{rpc, Server};
+use olpat_lsp_async_stub::{rpc, Server};
 use std::{io, sync::Arc};
 use olpat_lsp::world::WorldState;
 use wasm_bindgen::prelude::*;
@@ -17,7 +17,7 @@ pub struct TaploWasmLsp {
 #[wasm_bindgen]
 impl TaploWasmLsp {
     pub fn send(&self, message: JsValue) -> Result<(), JsError> {
-        let message: lsp_async_stub::rpc::Message = serde_wasm_bindgen::from_value(message)?;
+        let message: olpat_lsp_async_stub::rpc::Message = serde_wasm_bindgen::from_value(message)?;
         let world = self.world.clone();
         let writer = self.lsp_interface.clone();
 

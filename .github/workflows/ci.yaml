@@ -100,8 +100,8 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Test MSRV for olpat
         run: |
-          cargo check -p lsp-async-stub -p olpat-common -p olpat-lsp -p olpat
-          cargo test  -p lsp-async-stub -p olpat-common -p olpat-lsp -p olpat
+          cargo check -p olpat-lsp-async-stub -p olpat-common -p olpat-lsp -p olpat
+          cargo test  -p olpat-lsp-async-stub -p olpat-common -p olpat-lsp -p olpat
 
   test-msrv-bin:
     name: Test binaries with MSRV

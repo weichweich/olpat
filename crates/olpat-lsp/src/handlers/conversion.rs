@@ -1,4 +1,4 @@
-use lsp_async_stub::{rpc::Error, Context, Params};
+use olpat_lsp_async_stub::{rpc::Error, Context, Params};
 use serde_json::Value;
 use olpat::{dom::Node, parser::parse};
 use olpat_common::environment::Environment;

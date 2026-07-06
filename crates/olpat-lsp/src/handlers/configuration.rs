@@ -1,6 +1,6 @@
 use crate::world::{World, DEFAULT_WORKSPACE_URL};
 use anyhow::Context as AnyhowContext;
-use lsp_async_stub::{Context, Params, RequestWriter};
+use olpat_lsp_async_stub::{Context, Params, RequestWriter};
 use lsp_types::{
     request::WorkspaceConfiguration, ConfigurationItem, ConfigurationParams,
     DidChangeConfigurationParams,

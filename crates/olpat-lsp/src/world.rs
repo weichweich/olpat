@@ -4,7 +4,7 @@ use crate::{
 };
 use anyhow::anyhow;
 use arc_swap::ArcSwap;
-use lsp_async_stub::{rpc, util::Mapper, Context, RequestWriter};
+use olpat_lsp_async_stub::{rpc, util::Mapper, Context, RequestWriter};
 use lsp_types::Url;
 use once_cell::sync::Lazy;
 use regex::Regex;

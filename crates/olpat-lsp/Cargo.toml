@@ -18,7 +18,7 @@ native-tls = ["olpat-common/native-tls"]
 rustls-tls = ["olpat-common/rustls-tls"]
 
 [dependencies]
-lsp-async-stub = { version = "0.7.0", path = "../lsp-async-stub" }
+olpat-lsp-async-stub = { version = "0.7.0", path = "../olpat-lsp-async-stub" }
 olpat          = { version = "0.14.0", path = "../olpat", features = ["serde"] }
 olpat-common   = { version = "0.6.0", path = "../olpat-common", features = ["schema", "reqwest"] }
 
