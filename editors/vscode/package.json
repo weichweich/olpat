@@ -238,7 +238,7 @@
         },
         "olpat-ext.schema.associations": {
           "description": "Document and schema associations.",
-          "markdownDescription": "Additional document and schema associations. \n\n The key must be a regular expression, this pattern is used to associate schemas with absolute document URIs. Overlapping patterns result in undefined behaviour and either matching schema can be used. \n\n The value must be an absolute URI to the JSON schema, for supported values and more information [read here](https://olpat.eu/configuration#visual-studio-code).",
+          "markdownDescription": "Additional document and schema associations. \n\n The key must be a regular expression, this pattern is used to associate schemas with absolute document URIs. Overlapping patterns result in undefined behaviour and either matching schema can be used. \n\n The value must be an absolute URI to the JSON schema, for supported values and more information [read here](https://docs.olpat.eu/configuration#visual-studio-code).",
           "type": "object",
           "scope": "resource",
           "default": {}
@@ -389,7 +389,7 @@
           "scope": "resource",
           "type": "array",
           "default": [],
-          "markdownDescription": "Array of olpat rules in JSON format, see [Configuration File - Rules](https://olpat.eu/configuration/file.html#rules). The rules given here are appended to existing rules from config files, if any. There is no conversion done, all object keys must be snake_case, including formatting rules."
+          "markdownDescription": "Array of olpat rules in JSON format, see [Configuration File - Rules](https://docs.olpat.eu/configuration/file.html#rules). The rules given here are appended to existing rules from config files, if any. There is no conversion done, all object keys must be snake_case, including formatting rules."
         }
       }
     }

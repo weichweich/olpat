@@ -3,7 +3,7 @@ name: Continuous integration
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - release-*
     paths-ignore:
@@ -13,32 +13,20 @@ on:
   workflow_dispatch: {}
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
-  auto_tag:
-    name: Tag Releases
-    if: (github.event_name == 'push' && github.ref_type == 'branch') || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.WORKFLOW_PAT }}
-          fetch-depth: 0
-      - uses: tamasfe/auto-tag@v5
-        with:
-          name: tamasfe
-          email: me@tamasfe.dev
-          token: ${{ secrets.WORKFLOW_PAT }}
-
   fmt:
     name: Check formatting
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: docker://docker.io/weichweich/olpat:latest
-        with:
-          args: fmt --check --diff
+      - name: Install latest Rust toolchain
+        run: |
+          rustup toolchain install nightly --profile minimal
+          rustup component add rustfmt
+      - name: Check fmt
+        run: cargo +nightly fmt
 
   test:
     name: Test on Rust stable
@@ -48,7 +36,7 @@ jobs:
       - name: Install latest Rust toolchain
         run: rustup update --no-self-update
       - uses: Swatinem/rust-cache@v2
-      - name: Test Taplo
+      - name: Test olpat
         run: cargo test -p olpat
       - name: Check formatting regression
         run: cargo run -- fmt --check
