@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Taplo
+title: olpat
 titleTemplate: A versatile TOML toolkit.
 ---
 

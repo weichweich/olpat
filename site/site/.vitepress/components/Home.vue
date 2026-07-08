@@ -5,9 +5,14 @@
     <div class="tw-flex tw-flex-row tw-items-center tw-justify-center">
       <img :src="TaploIcon" class="tw-w-36 tw-mr-4" />
       <div class="tw-flex-col">
-        <div class="tw-font-bold tw-text-6xl tw-text-primary mb-4">Taplo</div>
+        <div class="tw-font-bold tw-text-6xl tw-text-primary mb-4">olpat</div>
         <div class="tw-text-2xl">A versatile, feature-rich TOML toolkit.</div>
       </div>
+    </div>
+    <div class="tw-mt-6 tw-text-center tw-text-sm tw-opacity-80">
+      olpat is a fork of
+      <a href="https://github.com/tamasfe/taplo">Taplo</a>
+      and is <strong>not under active development</strong>.
     </div>
     <div class="tw-flex tw-flex-row tw-flex-wrap tw-items-center tw-justify-center tw-gap-4 tw-mt-24">
       <!-- TODO: unhide editor -->

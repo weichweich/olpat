@@ -1,7 +1,3 @@
 # Homebrew
 
-Taplo is available on Homebrew under the [`taplo`](https://formulae.brew.sh/formula/taplo) formula.
-
-```sh
-brew install taplo
-```
+olpat is not published to Homebrew. See the other installation methods instead, such as [Cargo](./cargo.md), [NPM](./npm.md), [Docker](./docker.md), or the prebuilt [binary releases](./binary.md).

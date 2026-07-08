@@ -1,6 +1,6 @@
 # Configuration File
 
-Taplo supports configuration via file, unsurprisingly it uses the TOML format.
+olpat supports configuration via file, unsurprisingly it uses the TOML format.
 
 By default, every tool looks for one in the working directory or the root of the workspace by the following names (in precedence order):
 

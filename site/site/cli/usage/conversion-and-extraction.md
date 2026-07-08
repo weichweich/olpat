@@ -1,6 +1,6 @@
 # Conversion and Extraction
 
-Taplo makes it easy to convert TOML files to JSON and also extract specific values via the `get` command.
+olpat makes it easy to convert TOML files to JSON and also extract specific values via the `get` command.
 
 ## Examples
 
@@ -21,7 +21,7 @@ baz_field = "baz 2"
 ## Converting to JSON
 
 ```sh
-taplo get -f foo.toml -o json
+olpat get -f foo.toml -o json
 ```
 
 This will yield the following output:
@@ -47,7 +47,7 @@ This will yield the following output:
 It is possible to extract specific values via a simple query expressions.
 
 ```sh
-taplo get -f foo.toml 'baz[1].baz_field'
+olpat get -f foo.toml 'baz[1].baz_field'
 ```
 
 This will yield:
@@ -73,7 +73,7 @@ By default the value will be "parsed", so that no strings will contain escape se
 However it is also possible to change the output format to JSON:
 
 ```sh
-taplo get -f foo.toml -o json baz
+olpat get -f foo.toml -o json baz
 ```
 
 will yield:

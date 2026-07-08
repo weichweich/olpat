@@ -2,7 +2,7 @@ import { defineConfigWithTheme } from "vitepress";
 import type { DefaultTheme } from "vitepress";
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
-  title: "Taplo",
+  title: "olpat",
   description: "A versatile TOML toolkit",
   lastUpdated: true,
   head: [
@@ -53,7 +53,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ],
       },
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/tamasfe/taplo" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/weichweich/olpat" }],
     sidebar: {
       "/cli": [
         {
@@ -118,21 +118,21 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           text: "Rust",
           items: [
             {
-              text: "Taplo Core",
-              link: "/lib/rust/taplo",
+              text: "olpat Core",
+              link: "/lib/rust/olpat",
             },
-            { text: "Taplo LSP", link: "/lib/rust/taplo-lsp" },
-            { text: "Taplo Common", link: "/lib/rust/taplo-common" },
+            { text: "olpat LSP", link: "/lib/rust/olpat-lsp" },
+            { text: "olpat Common", link: "/lib/rust/olpat-common" },
           ],
         },
         {
           text: "JavaScript",
           items: [
             {
-              text: "Taplo Lib",
+              text: "olpat Lib",
               link: "/lib/javascript/lib",
             },
-            { text: "Taplo LSP", link: "/lib/javascript/lsp" },
+            { text: "olpat LSP", link: "/lib/javascript/lsp" },
           ],
         },
       ],

@@ -1,6 +1,6 @@
 # Directives
 
-The behaviour of Taplo can be further customized by comments in TOML files called `directives`.
+The behaviour of olpat can be further customized by comments in TOML files called `directives`.
 
 All directive comments must follow the following pattern: `#:<name> <content>`.
 
@@ -19,7 +19,7 @@ foo = "bar"
 
 ::: tip
 
-Relative paths are relative to the document file, if the file path is not known, Taplo will be unable to find the schema.
+Relative paths are relative to the document file, if the file path is not known, olpat will be unable to find the schema.
 
 :::
 
