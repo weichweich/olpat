@@ -1,20 +1,20 @@
-use olpat_lsp_async_stub::{
-    rpc::Error,
-    util::{LspExt, Position},
-    Context, Params,
-};
 use lsp_types::{
     CompletionItem, CompletionItemKind, CompletionParams, CompletionResponse, CompletionTextEdit,
     Documentation, InsertTextFormat, MarkupContent, Range, TextEdit,
 };
-use serde_json::Value;
-use std::borrow::Cow;
-use std::fmt::Write as _;
 use olpat::dom::{node::TableKind, Keys, Node};
 use olpat_common::{
     environment::Environment,
     schema::{ext::schema_ext_of, ValueExt},
 };
+use olpat_lsp_async_stub::{
+    rpc::Error,
+    util::{LspExt, Position},
+    Context, Params,
+};
+use serde_json::Value;
+use std::borrow::Cow;
+use std::fmt::Write as _;
 
 use crate::{
     query::{lookup_keys, Query},

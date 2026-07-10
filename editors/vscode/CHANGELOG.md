@@ -212,7 +212,7 @@
 ### Features
 
 - Syntax highlight for comment directives (comments starting with `#:`)
-- Syntax highlight in markdown 
+- Syntax highlight in markdown
 
 ### Fixes
 

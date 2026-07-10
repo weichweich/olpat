@@ -4,12 +4,7 @@ use crate::{
 };
 use anyhow::anyhow;
 use arc_swap::ArcSwap;
-use olpat_lsp_async_stub::{rpc, util::Mapper, Context, RequestWriter};
 use lsp_types::Url;
-use once_cell::sync::Lazy;
-use regex::Regex;
-use serde_json::json;
-use std::{str, sync::Arc, time::Duration};
 use olpat::{dom::Node, parser::Parse};
 use olpat_common::{
     config::Config,
@@ -20,6 +15,11 @@ use olpat_common::{
     },
     AsyncRwLock, HashMap, IndexMap,
 };
+use olpat_lsp_async_stub::{rpc, util::Mapper, Context, RequestWriter};
+use once_cell::sync::Lazy;
+use regex::Regex;
+use serde_json::json;
+use std::{str, sync::Arc, time::Duration};
 
 pub type World<E> = Arc<WorldState<E>>;
 

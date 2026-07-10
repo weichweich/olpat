@@ -1,14 +1,14 @@
 use anyhow::{anyhow, Context};
 use args::GeneralArgs;
 use itertools::Itertools;
+#[cfg(feature = "lint")]
+use olpat_common::schema::Schemas;
+use olpat_common::{config::Config, environment::Environment, util::Normalize};
 use std::{
     path::{Path, PathBuf},
     str,
     sync::Arc,
 };
-#[cfg(feature = "lint")]
-use olpat_common::schema::Schemas;
-use olpat_common::{config::Config, environment::Environment, util::Normalize};
 
 pub mod args;
 pub mod commands;

@@ -16,4 +16,3 @@ export interface Range {
    */
   end: number;
 }
-

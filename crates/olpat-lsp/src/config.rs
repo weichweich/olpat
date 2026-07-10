@@ -1,13 +1,13 @@
 use figment::{providers::Serialized, Figment};
 use lsp_types::Url;
-use serde::{Deserialize, Serialize};
-use serde_json::Value;
-use std::path::PathBuf;
 use olpat_common::{
     config::Rule,
     schema::{associations::DEFAULT_CATALOGS, cache::DEFAULT_LRU_CACHE_EXPIRATION_TIME},
     HashMap,
 };
+use serde::{Deserialize, Serialize};
+use serde_json::Value;
+use std::path::PathBuf;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]

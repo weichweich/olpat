@@ -1,4 +1,3 @@
-use olpat_lsp_async_stub::{util::Mapper, Context, Params, RequestWriter};
 use lsp_types::{
     notification, Diagnostic, DiagnosticSeverity, DidChangeTextDocumentParams,
     DidCloseTextDocumentParams, DidOpenTextDocumentParams, DidSaveTextDocumentParams,
@@ -8,6 +7,7 @@ use olpat_common::{
     environment::Environment,
     schema::associations::{source, AssociationRule},
 };
+use olpat_lsp_async_stub::{util::Mapper, Context, Params, RequestWriter};
 
 use crate::{
     diagnostics,

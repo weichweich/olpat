@@ -5,7 +5,7 @@ title: Editor
 
 <script setup>
 import Editor from "./.vitepress/components/Editor.vue";
-</script> 
+</script>
 
 <ClientOnly>
     <Editor />

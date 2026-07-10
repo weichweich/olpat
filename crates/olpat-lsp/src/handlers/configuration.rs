@@ -1,12 +1,12 @@
 use crate::world::{World, DEFAULT_WORKSPACE_URL};
 use anyhow::Context as AnyhowContext;
-use olpat_lsp_async_stub::{Context, Params, RequestWriter};
 use lsp_types::{
     request::WorkspaceConfiguration, ConfigurationItem, ConfigurationParams,
     DidChangeConfigurationParams,
 };
-use std::iter::once;
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::{Context, Params, RequestWriter};
+use std::iter::once;
 
 #[tracing::instrument(skip_all)]
 pub async fn configuration_change<E: Environment>(

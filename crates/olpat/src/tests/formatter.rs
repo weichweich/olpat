@@ -21,14 +21,14 @@ fn comment_indentation() {
 # asd
    # asd
 
-# bsd 
+# bsd
  # bsd
 asd = ""
 
 # csd
     [profile.release]
 
-    incremental  = true 
+    incremental  = true
     lol = 2 #yo
     debug = 0          # Set this to 1 or 2 to get more useful backtraces in debugger.
 
@@ -46,7 +46,7 @@ asd = ""
 # asd
 # asd
 
-# bsd 
+# bsd
 # bsd
 asd = ""
 
@@ -120,17 +120,17 @@ k5 = false                         # 555
 
 #[test]
 fn test_space_in_line() {
-    let src = r#" 
+    let src = r#"
 [foo]
- 
+
 foo = "bar"
- 
+
 bar = "foo"
- 
 
- 
 
- 
+
+
+
 
 [bar]
 foo = "bar"

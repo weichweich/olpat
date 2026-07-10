@@ -12,10 +12,10 @@
     clippy::enum_glob_use
 )]
 
-use olpat_lsp_async_stub::Server;
 use lsp_types::{notification, request};
-use std::sync::Arc;
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::Server;
+use std::sync::Arc;
 use world::{World, WorldState};
 
 mod diagnostics;

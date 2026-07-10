@@ -23,4 +23,3 @@ export const commentDirective = {
     comment: 'Comments',
     match: '\\s*((#):.*)$',
 }
-

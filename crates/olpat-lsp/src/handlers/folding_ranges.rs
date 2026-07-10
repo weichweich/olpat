@@ -1,6 +1,5 @@
 #![allow(clippy::cast_possible_truncation)]
 
-use olpat_lsp_async_stub::{rpc::Error, util::Mapper, Context, Params};
 use lsp_types::{FoldingRange, FoldingRangeKind, FoldingRangeParams};
 use olpat::{
     dom::node::DomNode,
@@ -15,6 +14,7 @@ use olpat::{
     },
 };
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::{rpc::Error, util::Mapper, Context, Params};
 
 use crate::world::World;
 

@@ -6,6 +6,7 @@ use crate::{
     IndexMap,
 };
 use anyhow::anyhow;
+use olpat::dom::Node;
 use parking_lot::{RwLock, RwLockReadGuard};
 use regex::Regex;
 use semver::Version;
@@ -13,7 +14,6 @@ use serde::{de::Error, Deserialize, Serialize};
 use serde_json::{json, Value};
 use std::{borrow::Cow, path::Path, sync::Arc};
 use tap::Tap;
-use olpat::dom::Node;
 use tokio::sync::Semaphore;
 use url::Url;
 
@@ -503,8 +503,7 @@ pub struct SchemaStoreSchemaMeta {
     pub versions: IndexMap<String, Url>,
 }
 
-pub const SCHEMA_STORE_CATALOG_SCHEMA_URL: &str =
-    "https://www.schemastore.org/schema-catalog.json";
+pub const SCHEMA_STORE_CATALOG_SCHEMA_URL: &str = "https://www.schemastore.org/schema-catalog.json";
 
 #[derive(Debug, Clone, Copy)]
 pub struct SchemaStoreCatalogSchema;

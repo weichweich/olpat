@@ -13,11 +13,11 @@ repository   = { workspace = true }
 crate-type = ["cdylib"]
 
 [dependencies]
+olpat                = { path = "../olpat" }
+olpat-cli            = { path = "../olpat-cli", optional = true, default-features = false }
+olpat-common         = { path = "../olpat-common", default-features = false, features = ["rustls-tls", "schema", "reqwest"] }
+olpat-lsp            = { path = "../olpat-lsp", optional = true, default-features = false }
 olpat-lsp-async-stub = { path = "../olpat-lsp-async-stub" }
-olpat          = { path = "../olpat" }
-olpat-cli      = { path = "../olpat-cli", optional = true, default-features = false }
-olpat-common   = { path = "../olpat-common", default-features = false, features = ["rustls-tls", "schema", "reqwest"] }
-olpat-lsp      = { path = "../olpat-lsp", optional = true, default-features = false }
 
 anyhow                   = { workspace = true }
 async-trait              = { workspace = true }

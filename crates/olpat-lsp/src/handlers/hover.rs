@@ -3,13 +3,7 @@ use crate::{
     world::World,
 };
 use itertools::Itertools;
-use olpat_lsp_async_stub::{
-    rpc::Error,
-    util::{LspExt, Position},
-    Context, Params,
-};
 use lsp_types::{Hover, HoverContents, HoverParams, MarkupContent, MarkupKind};
-use serde_json::Value;
 use olpat::{
     dom::{KeyOrIndex, Keys},
     syntax::SyntaxKind::{
@@ -19,6 +13,12 @@ use olpat::{
     },
 };
 use olpat_common::{environment::Environment, schema::ext::schema_ext_of};
+use olpat_lsp_async_stub::{
+    rpc::Error,
+    util::{LspExt, Position},
+    Context, Params,
+};
+use serde_json::Value;
 
 #[tracing::instrument(skip_all)]
 pub(crate) async fn hover<E: Environment>(

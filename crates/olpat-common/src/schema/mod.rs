@@ -6,14 +6,14 @@ use futures::{stream::FuturesUnordered, StreamExt};
 use itertools::Itertools;
 use json_value_merge::Merge;
 use jsonschema::{error::ValidationErrorKind, JSONSchema, SchemaResolver, ValidationError};
-use parking_lot::Mutex;
-use regex::Regex;
-use serde_json::Value;
-use std::{borrow::Cow, num::NonZeroUsize, sync::Arc};
 use olpat::{
     dom::{self, node::Key, KeyOrIndex, Keys},
     rowan::TextRange,
 };
+use parking_lot::Mutex;
+use regex::Regex;
+use serde_json::Value;
+use std::{borrow::Cow, num::NonZeroUsize, sync::Arc};
 use thiserror::Error;
 use tokio::sync::Semaphore;
 use url::Url;
