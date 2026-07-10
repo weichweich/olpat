@@ -11,8 +11,8 @@ repository   = { workspace = true }
 
 [features]
 # default-tls enables native-tls but without enabling native-tls specific features.
-native-tls = ["reqwest/default-tls"]
-rustls-tls = ["reqwest/rustls-tls"]
+native-tls = ["reqwest/native-tls"]
+rustls-tls = ["reqwest/rustls"]
 schema     = []
 reqwest    = ["dep:reqwest"]
 

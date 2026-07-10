@@ -13,7 +13,7 @@ repository   = { workspace = true }
 
 [features]
 default     = ["completions", "lint", "lsp", "rustls-tls", "toml-test"]
-lint        = ["reqwest", "olpat-common/reqwest", "olpat-common/schema"]
+lint        = ["olpat-common/reqwest", "olpat-common/schema", "reqwest"]
 lsp         = ["async-ctrlc", "lint", "olpat-lsp"]
 native-tls  = ["olpat-common/native-tls", "olpat-lsp?/native-tls"]
 rustls-tls  = ["olpat-common/rustls-tls", "olpat-lsp?/rustls-tls"]
