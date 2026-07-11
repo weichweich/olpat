@@ -20,7 +20,7 @@ async-trait        = { version = "0.1.52" }
 clap               = { version = "4.5.31", default-features = false, features = ["std"] }
 either             = { version = "1.6.1" }
 futures            = { version = "0.3.30" }
-getrandom          = { version = "0.2", default-features = false }
+getrandom          = { version = "0.4.3", default-features = false }
 glob               = { version = "0.3" }
 globset            = { version = "0.4.8" }
 hex                = { version = "0.4" }
