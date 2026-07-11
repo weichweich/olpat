@@ -24,7 +24,7 @@ jobs:
       - name: Install latest Rust toolchain
         run: |
           rustup toolchain install nightly --profile minimal
-          rustup component add rustfmt
+          rustup component add --toolchain nightly rustfmt
       - name: Check fmt
         run: cargo +nightly fmt
 
