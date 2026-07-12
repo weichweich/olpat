@@ -33,9 +33,9 @@ impl<E: Environment> Taplo<E> {
                 ]));
 
             if self.colors {
-                term::emit(&mut Ansi::new(&mut out_diag), &config, file, &diag)?;
+                term::emit_to_io_write(&mut Ansi::new(&mut out_diag), &config, file, &diag)?;
             } else {
-                term::emit(&mut NoColor::new(&mut out_diag), &config, file, &diag)?;
+                term::emit_to_io_write(&mut NoColor::new(&mut out_diag), &config, file, &diag)?;
             }
         }
 
@@ -104,9 +104,9 @@ impl<E: Environment> Taplo<E> {
             };
 
             if self.colors {
-                term::emit(&mut Ansi::new(&mut out_diag), &config, file, &diag)?;
+                term::emit_to_io_write(&mut Ansi::new(&mut out_diag), &config, file, &diag)?;
             } else {
-                term::emit(&mut NoColor::new(&mut out_diag), &config, file, &diag)?;
+                term::emit_to_io_write(&mut NoColor::new(&mut out_diag), &config, file, &diag)?;
             }
         }
         let mut stderr = self.env.stderr();
@@ -134,9 +134,9 @@ impl<E: Environment> Taplo<E> {
                     ]));
 
                 if self.colors {
-                    term::emit(&mut Ansi::new(&mut out_diag), &config, file, &diag)?;
+                    term::emit_to_io_write(&mut Ansi::new(&mut out_diag), &config, file, &diag)?;
                 } else {
-                    term::emit(&mut NoColor::new(&mut out_diag), &config, file, &diag)?;
+                    term::emit_to_io_write(&mut NoColor::new(&mut out_diag), &config, file, &diag)?;
                 };
             }
         }

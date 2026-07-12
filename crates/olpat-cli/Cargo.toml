@@ -27,7 +27,7 @@ olpat-lsp    = { version = "0.8.0", path = "../olpat-lsp", default-features = fa
 
 anyhow             = { workspace = true }
 clap               = { workspace = true, features = ["derive", "cargo", "env", "default"] }
-codespan-reporting = { version = "0.11.1" }
+codespan-reporting = { workspace = true }
 futures            = { workspace = true }
 glob               = { workspace = true }
 hex                = { workspace = true }
