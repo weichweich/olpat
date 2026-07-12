@@ -45,7 +45,7 @@ fn dates_in_table_keys() {
 #[test]
 fn inline_table_with_linebreaks_and_trailing_comma() {
     let src = r#"
-cooldowns = { 
+cooldowns = {
     foo = "foo",
     bar = "bar",
 }

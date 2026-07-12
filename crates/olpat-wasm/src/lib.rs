@@ -1,8 +1,8 @@
 use environment::WasmEnvironment;
-use serde::Serialize;
-use std::path::Path;
 use olpat::{dom::Node, formatter, parser::parse};
 use olpat_common::{config::Config, schema::Schemas};
+use serde::Serialize;
+use std::path::Path;
 use url::Url;
 use wasm_bindgen::prelude::*;
 
@@ -213,7 +213,6 @@ pub async fn run_cli(env: JsValue, args: JsValue) -> Result<(), JsError> {
 #[cfg(feature = "lsp")]
 #[wasm_bindgen]
 pub fn create_lsp(env: JsValue, lsp_interface: JsValue) -> lsp::TaploWasmLsp {
-    
     use olpat_common::log::setup_stderr_logging;
 
     let env = WasmEnvironment::from(env);

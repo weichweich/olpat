@@ -1,11 +1,11 @@
 use crate::world::{DocumentState, WorkspaceState, World};
-use olpat_lsp_async_stub::{util::LspExt, Context, RequestWriter};
 use lsp_types::{
     notification, Diagnostic, DiagnosticRelatedInformation, DiagnosticSeverity, Location,
     PublishDiagnosticsParams, Url,
 };
 use olpat::dom::Node;
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::{util::LspExt, Context, RequestWriter};
 
 #[tracing::instrument(skip_all)]
 pub(crate) async fn publish_diagnostics<E: Environment>(

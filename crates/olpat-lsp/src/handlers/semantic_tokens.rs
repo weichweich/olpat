@@ -1,9 +1,4 @@
 use crate::World;
-use olpat_lsp_async_stub::{
-    rpc::Error,
-    util::{relative_range, LspExt, Mapper},
-    Context, Params,
-};
 use lsp_types::{
     Range, SemanticToken, SemanticTokenModifier, SemanticTokenType, SemanticTokens,
     SemanticTokensParams, SemanticTokensResult,
@@ -17,6 +12,11 @@ use olpat::{
     },
 };
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::{
+    rpc::Error,
+    util::{relative_range, LspExt, Mapper},
+    Context, Params,
+};
 
 #[tracing::instrument(skip_all)]
 pub(crate) async fn semantic_tokens<E: Environment>(

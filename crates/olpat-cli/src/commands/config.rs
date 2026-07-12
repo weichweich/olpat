@@ -1,5 +1,5 @@
-use schemars::schema_for;
 use olpat_common::{config::Config, environment::Environment};
+use schemars::schema_for;
 use tokio::io::AsyncWriteExt;
 
 use crate::{args::ConfigCommand, default_config, Taplo};

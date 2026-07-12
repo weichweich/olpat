@@ -8,11 +8,11 @@ use codespan_reporting::{
     },
 };
 use itertools::Itertools;
-use std::ops::Range;
 use olpat::{dom, parser, rowan::TextRange};
 use olpat_common::environment::Environment;
 #[cfg(feature = "lint")]
 use olpat_common::schema::NodeValidationError;
+use std::ops::Range;
 use tokio::io::AsyncWriteExt;
 
 impl<E: Environment> Taplo<E> {

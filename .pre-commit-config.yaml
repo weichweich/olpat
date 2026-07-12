@@ -1,0 +1,55 @@
+exclude: target/|test-data/
+
+repos:
+  # These are "general" hooks provided by the pre-commit devs
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+  - repo: https://github.com/AndrejOrsula/pre-commit-cargo
+    rev: 0.5.0
+    hooks:
+      - id: cargo-fmt
+        entry: cargo +nightly fmt
+      - id: cargo-clippy
+        args:
+          - --all-targets
+          - --all-features
+          - --tests
+          - --
+          - --deny
+          - warnings
+      - id: cargo-doc
+        args:
+          - --workspace
+          - --no-deps
+  - repo: https://github.com/EmbarkStudios/cargo-deny
+    rev: 0.19.9
+    hooks:
+      - id: cargo-deny
+        args:
+          - --all-features
+          - --workspace
+          - check
+          - --deny
+          - unmatched-skip
+          - --deny
+          - license-not-encountered
+          - --deny
+          - license-exception-not-encountered
+          - --deny
+          - advisory-not-detected
+          - --hide-inclusion-graph
+  - repo: https://github.com/bnjbvr/cargo-machete
+    rev: 6ddd489
+    hooks:
+      - id: cargo-machete
+        args:
+          - --with-metadata
+  - repo: https://github.com/weichweich/olpat
+    rev: v0.10.0
+    hooks:
+      - id: olpat-format
+      - id: olpat-lint

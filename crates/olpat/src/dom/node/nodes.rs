@@ -145,7 +145,7 @@ pub(crate) struct KeyInner {
     /// in a TOML document.
     ///
     /// # Example
-    ///  
+    ///
     /// In the following both `table` and `inner` appear multiple times
     /// despite being the same key in the DOM.
     ///

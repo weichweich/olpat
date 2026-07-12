@@ -9,12 +9,12 @@ use crate::{
     },
     world::World,
 };
-use olpat_lsp_async_stub::{rpc::Error, Context, Params};
-use serde_json::json;
 use olpat_common::{
     environment::Environment,
     schema::associations::{priority, source, AssociationRule, SchemaAssociation},
 };
+use olpat_lsp_async_stub::{rpc::Error, Context, Params};
+use serde_json::json;
 
 #[tracing::instrument(skip_all)]
 pub async fn list_schemas<E: Environment>(

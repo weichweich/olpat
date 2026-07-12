@@ -4,10 +4,10 @@ use std::{
 };
 
 use anyhow::Context;
+use olpat::formatter;
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
-use olpat::formatter;
 use url::Url;
 
 use crate::{

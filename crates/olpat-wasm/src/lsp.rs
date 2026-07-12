@@ -1,9 +1,9 @@
 use crate::environment::WasmEnvironment;
 use futures::Sink;
 use js_sys::Function;
+use olpat_lsp::world::WorldState;
 use olpat_lsp_async_stub::{rpc, Server};
 use std::{io, sync::Arc};
-use olpat_lsp::world::WorldState;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::spawn_local;
 

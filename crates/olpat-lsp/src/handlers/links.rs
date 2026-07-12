@@ -1,11 +1,11 @@
 use crate::world::World;
-use olpat_lsp_async_stub::rpc::Error;
-use olpat_lsp_async_stub::util::LspExt;
-use olpat_lsp_async_stub::{Context, Params};
 use lsp_types::{DocumentLink, DocumentLinkParams, Url};
 use olpat::dom::KeyOrIndex;
 use olpat_common::environment::Environment;
 use olpat_common::schema::ext::schema_ext_of;
+use olpat_lsp_async_stub::rpc::Error;
+use olpat_lsp_async_stub::util::LspExt;
+use olpat_lsp_async_stub::{Context, Params};
 
 #[tracing::instrument(skip_all)]
 pub async fn links<E: Environment>(

@@ -13,18 +13,18 @@ repository   = { workspace = true }
 crate-type = ["cdylib"]
 
 [dependencies]
+olpat                = { path = "../olpat" }
+olpat-cli            = { path = "../olpat-cli", optional = true, default-features = false }
+olpat-common         = { path = "../olpat-common", default-features = false, features = ["rustls-tls", "schema", "reqwest"] }
+olpat-lsp            = { path = "../olpat-lsp", optional = true, default-features = false }
 olpat-lsp-async-stub = { path = "../olpat-lsp-async-stub" }
-olpat          = { path = "../olpat" }
-olpat-cli      = { path = "../olpat-cli", optional = true, default-features = false }
-olpat-common   = { path = "../olpat-common", default-features = false, features = ["rustls-tls", "schema", "reqwest"] }
-olpat-lsp      = { path = "../olpat-lsp", optional = true, default-features = false }
 
 anyhow                   = { workspace = true }
 async-trait              = { workspace = true }
 clap                     = { workspace = true, features = ["derive"] }
 console_error_panic_hook = { version = "0.1.7" }
 futures                  = { workspace = true }
-getrandom                = { workspace = true, features = ["js"] }
+getrandom                = { workspace = true, features = ["wasm_js"] }
 indexmap                 = { workspace = true }
 serde                    = { workspace = true, features = ["derive"] }
 serde-wasm-bindgen       = { version = "0.6.5" }

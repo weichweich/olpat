@@ -4,7 +4,6 @@ use super::{semantic_tokens, update_configuration};
 use crate::config::InitConfig;
 use crate::world::WorkspaceState;
 use crate::World;
-use olpat_lsp_async_stub::{rpc::Error, Context, Params};
 use lsp_types::{
     CompletionOptions, DocumentLinkOptions, FoldingRangeProviderCapability,
     HoverProviderCapability, InitializedParams, OneOf, RenameOptions, SemanticTokensFullOptions,
@@ -14,6 +13,7 @@ use lsp_types::{
 };
 use lsp_types::{InitializeParams, InitializeResult};
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::{rpc::Error, Context, Params};
 
 #[tracing::instrument(skip_all)]
 pub async fn initialize<E: Environment>(

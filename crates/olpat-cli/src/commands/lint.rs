@@ -3,12 +3,12 @@ use std::path::Path;
 use crate::{args::LintCommand, Taplo};
 use anyhow::{anyhow, Context};
 use codespan_reporting::files::SimpleFile;
-use serde_json::json;
 use olpat::parser;
 use olpat_common::{
     environment::Environment,
     schema::associations::{AssociationRule, SchemaAssociation, DEFAULT_CATALOGS},
 };
+use serde_json::json;
 use tokio::io::AsyncReadExt;
 use url::Url;
 

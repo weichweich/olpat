@@ -1,12 +1,12 @@
 use crate::world::{DocumentState, World};
+use lsp_types::{DocumentSymbol, DocumentSymbolParams, DocumentSymbolResponse, SymbolKind};
+use olpat::{dom::Node, rowan::TextRange, util::join_ranges};
+use olpat_common::environment::Environment;
 use olpat_lsp_async_stub::{
     rpc::Error,
     util::{LspExt, Mapper},
     Context, Params,
 };
-use lsp_types::{DocumentSymbol, DocumentSymbolParams, DocumentSymbolResponse, SymbolKind};
-use olpat::{dom::Node, rowan::TextRange, util::join_ranges};
-use olpat_common::environment::Environment;
 
 #[tracing::instrument(skip_all)]
 pub(crate) async fn document_symbols<E: Environment>(

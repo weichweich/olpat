@@ -1,7 +1,7 @@
-use olpat_lsp_async_stub::{rpc::Error, util::LspExt, Context, Params};
 use lsp_types::{DocumentFormattingParams, TextEdit};
 use olpat::formatter;
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::{rpc::Error, util::LspExt, Context, Params};
 
 use crate::World;
 

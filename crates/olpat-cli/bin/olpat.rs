@@ -1,10 +1,10 @@
 use clap::Parser;
-use std::process::exit;
 use olpat_cli::{
     args::{Colors, TaploArgs},
     Taplo,
 };
 use olpat_common::{environment::native::NativeEnvironment, log::setup_stderr_logging};
+use std::process::exit;
 use tracing::Instrument;
 
 #[tokio::main]

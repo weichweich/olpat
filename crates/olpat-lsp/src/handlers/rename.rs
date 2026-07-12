@@ -1,16 +1,16 @@
 use crate::query::{lookup_keys, Query};
 use crate::world::World;
-use olpat_lsp_async_stub::rpc::Error;
-use olpat_lsp_async_stub::util::{LspExt, Position};
-use olpat_lsp_async_stub::{Context, Params};
 use lsp_types::{
     PrepareRenameResponse, RenameParams, TextDocumentPositionParams, TextEdit, WorkspaceEdit,
 };
-use std::collections::HashMap;
 use olpat::dom::rewrite::Rewrite;
 use olpat::dom::{KeyOrIndex, Keys};
 use olpat::syntax::SyntaxKind;
 use olpat_common::environment::Environment;
+use olpat_lsp_async_stub::rpc::Error;
+use olpat_lsp_async_stub::util::{LspExt, Position};
+use olpat_lsp_async_stub::{Context, Params};
+use std::collections::HashMap;
 
 #[tracing::instrument(skip_all)]
 pub async fn prepare_rename<E: Environment>(
