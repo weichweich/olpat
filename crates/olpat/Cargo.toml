@@ -41,7 +41,7 @@ serde_json       = { version = "1" }
 toml             = { version = "0.7" }
 
 [target.'cfg(unix)'.dev-dependencies]
-pprof = { version = "0.14", features = ["flamegraph", "criterion"] } # pprof -> criterion -> clap
+pprof = { version = "0.15.0", features = ["flamegraph", "criterion"] } # pprof -> criterion -> clap
 
 [package.metadata.docs.rs]
 features = ["serde", "schema"]
