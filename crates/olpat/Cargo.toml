@@ -35,8 +35,8 @@ serde    = { workspace = true, features = ["derive"], optional = true }
 
 [dev-dependencies]
 assert-json-diff = { version = "2" }
-criterion        = { version = "0.5" }   # criterion -> clap
-difference       = { version = "2.0.0" }
+criterion        = { version = "0.5" }  # criterion -> clap
+similar          = { workspace = true }
 serde_json       = { version = "1" }
 toml             = { version = "0.7" }
 

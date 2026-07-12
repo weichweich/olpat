@@ -645,12 +645,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "difference"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "524cbf6897b527295dff137cec09ecf3a05f4fddffd7dfcd1585403449e74198"
-
-[[package]]
 name = "digest"
 version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1772,7 +1766,6 @@ dependencies = [
  "arc-swap",
  "assert-json-diff",
  "criterion",
- "difference",
  "either",
  "globset",
  "itertools 0.15.0",
@@ -1783,6 +1776,7 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
+ "similar",
  "thiserror 2.0.18",
  "time",
  "toml 0.7.8",
@@ -2735,6 +2729,15 @@ name = "simdutf8"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e"
+
+[[package]]
+name = "similar"
+version = "3.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e6505efef05804732ed8a3f2d4f279429eb485bd69d5b0cc6b19cc02005cda16"
+dependencies = [
+ "bstr",
+]
 
 [[package]]
 name = "slab"
