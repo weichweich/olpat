@@ -16,6 +16,15 @@ on:
       - main
 
 jobs:
+  cargo-deny:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+    - uses: EmbarkStudios/cargo-deny-action@v2
+      with:
+        arguments: --all-features --workspace
+        command-arguments: --hide-inclusion-graph
+
   fmt:
     name: Check formatting
     runs-on: ubuntu-latest
