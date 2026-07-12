@@ -125,17 +125,19 @@ impl<E: Environment> Taplo<E> {
         let mut post_line = 0_usize;
 
         for (idx, diff_op) in hunks.into_iter().enumerate() {
-            use ansi_term::Colour::{self, Green, Red};
+            use owo_colors::Style;
             use prettydiff::basic::DiffOp;
 
             // apply the given color and prefix to the set of strings `s`
             fn apply_color<'a>(
                 s: &'a [&'a str],
                 prefix: &'a str,
-                color: Colour,
+                style: Style,
             ) -> impl IntoIterator<Item = String> + 'a {
+                use owo_colors::OwoColorize as _;
+
                 s.iter()
-                    .map(move |&s| color.paint(prefix.to_owned() + s).to_string())
+                    .map(move |&s| (prefix.to_owned() + s).style(style).to_string())
             }
 
             let mut pre_length = 0_usize;
@@ -168,16 +170,16 @@ impl<E: Environment> Taplo<E> {
                     }
                 }
                 DiffOp::Insert(ins) => {
-                    acc.extend(apply_color(ins, "+", Green));
+                    acc.extend(apply_color(ins, "+", Style::new().green()));
                     post_length += ins.len();
                 }
                 DiffOp::Remove(rem) => {
-                    acc.extend(apply_color(rem, "-", Red));
+                    acc.extend(apply_color(rem, "-", Style::new().red()));
                     pre_length += rem.len();
                 }
                 DiffOp::Replace(rem, ins) => {
-                    acc.extend(apply_color(rem, "-", Red));
-                    acc.extend(apply_color(ins, "+", Green));
+                    acc.extend(apply_color(rem, "-", Style::new().red()));
+                    acc.extend(apply_color(ins, "+", Style::new().green()));
                     pre_length += rem.len();
                     post_length += ins.len();
                 }
