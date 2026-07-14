@@ -44,3 +44,7 @@ Changelog     = "https://github.com/weichweich/olpat/blob/master/crates/olpat-cl
 [tool.maturin]
 bindings      = "bin"
 manifest-path = "crates/olpat-cli/Cargo.toml"
+# The workspace-root LICENSE lives outside the crate dir, so `cargo package`
+# leaves it out of the sdist even though maturin records `License-File: LICENSE`.
+# Explicitly ship it so PyPI's metadata validation passes.
+include = [{ path = "LICENSE", format = "sdist" }]
