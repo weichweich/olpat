@@ -5,8 +5,8 @@ build-backend = "maturin"
 [project]
 name            = "olpat"
 description     = "A CLI for the olpat TOML toolkit (a maintained fork of taplo)"
-authors         = [{ name = "tamasfe" }]
-maintainers     = [{ name = "Jakub Panek" }]
+authors         = [{ name = "tamasfe" }, { name = "weichweich" }]
+maintainers     = [{ name = "weichweich" }]
 requires-python = ">=3.8"
 dynamic         = ["version"]
 
@@ -36,7 +36,7 @@ classifiers = [
 
 [project.urls]
 Homepage      = "https://github.com/weichweich/olpat"
-Documentation = "https://taplo.tamasfe.dev/cli/introduction.html"
+Documentation = "https://docs.olpat.eu"
 Repository    = "https://github.com/weichweich/olpat.git"
 Tracker       = "https://github.com/weichweich/olpat/issues"
 Changelog     = "https://github.com/weichweich/olpat/blob/master/crates/olpat-cli/CHANGELOG.md"
