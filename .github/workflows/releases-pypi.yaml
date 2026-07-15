@@ -1,0 +1,75 @@
+name: Releases-pypi
+
+on:
+  push:
+    tags:
+      - olpat-cli-*
+  workflow_dispatch:
+
+  build_pypi_olpat_cli:
+    name: Build python wheels
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu, windows, macos]
+        arch: [x86, x64] # TODO: add aarch64 once it's supported again
+        exclude:
+          - os: windows
+            arch: aarch64
+          - os: macos
+            arch: x86
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set CFLAGS for aarch64 on Ubuntu
+        if: matrix.os == 'ubuntu' && matrix.arch == 'aarch64'
+        # Workaround issue cross-compiling to aarch64 https://github.com/bobzilladev/ring-poc
+        run: |
+          echo "CFLAGS_aarch64_unknown_linux_gnu=-D__ARM_ARCH=8" >> $GITHUB_ENV
+      - name: Build sdist
+        if: matrix.os == 'ubuntu' && matrix.arch == 'x64'
+        uses: PyO3/maturin-action@v1
+        with:
+          command: sdist
+          args: --out dist
+      - name: Build wheels
+        uses: PyO3/maturin-action@v1
+        with:
+          target: ${{ matrix.arch }}
+          args: --release --out dist
+          sccache: "true"
+          manylinux: auto
+      - name: Upload wheels
+        uses: actions/upload-artifact@v7
+        with:
+          name: wheels-${{ matrix.os }}-${{ matrix.arch }}
+          path: dist
+
+  publish-to-pypi:
+    name: Publish Python 🐍 distribution 📦 to PyPi
+    needs:
+      - build_pypi_olpat_cli
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: publish-to-pypi
+      cancel-in-progress: false
+
+    environment:
+      name: pypi
+      url: https://pypi.org/p/olpat
+
+    permissions:
+      id-token: write # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v8
+        with:
+          pattern: wheels-*
+          merge-multiple: true
+          path: dist/
+      - name: Publish distribution 📦 to PyPi
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://pypi.org/legacy/
