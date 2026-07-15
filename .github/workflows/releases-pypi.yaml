@@ -6,6 +6,7 @@ on:
       - olpat-cli-*
   workflow_dispatch:
 
+jobs:
   build_pypi_olpat_cli:
     name: Build python wheels
     runs-on: ${{ matrix.os }}-latest
@@ -71,5 +72,3 @@ on:
           path: dist/
       - name: Publish distribution 📦 to PyPi
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          repository-url: https://pypi.org/legacy/
