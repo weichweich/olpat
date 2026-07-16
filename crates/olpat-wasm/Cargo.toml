@@ -25,14 +25,16 @@ clap                     = { workspace = true, features = ["derive"] }
 console_error_panic_hook = { version = "0.1.7" }
 futures                  = { workspace = true }
 getrandom                = { workspace = true, features = ["wasm_js"] }
-indexmap                 = { workspace = true }
-serde                    = { workspace = true, features = ["derive"] }
-serde-wasm-bindgen       = { version = "0.6.5" }
-serde_json               = { workspace = true }
-time                     = { workspace = true, features = ["parsing"] }
-tokio                    = { workspace = true }
-tracing                  = { workspace = true }
-url                      = { workspace = true }
+# used by olpat-common -> jsonschema. We need to enable the wasm_js feature.
+getrandom0_3       = { version = "0.3", package = "getrandom", features = ["wasm_js"] }
+indexmap           = { workspace = true }
+serde              = { workspace = true, features = ["derive"] }
+serde-wasm-bindgen = { version = "0.6.5" }
+serde_json         = { workspace = true }
+time               = { workspace = true, features = ["parsing"] }
+tokio              = { workspace = true }
+tracing            = { workspace = true }
+url                = { workspace = true }
 
 # Bump all together since it's a monorepo
 js-sys               = { version = "0.3.72" }
