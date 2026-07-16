@@ -91,7 +91,7 @@ pub struct FormatCommand {
 
     /// A formatter option given as a "key=value", can be set multiple times.
     ///
-    /// The valid options and values are available here: https://taplo.tamasfe.dev/configuration/formatter-options.html
+    /// The valid options and values are available here: https://docs.olpat.eu/configuration/formatter-options.html
     #[clap(long = "option", short)]
     pub options: Vec<String>,
 

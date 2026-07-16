@@ -68,7 +68,7 @@ The example below contains all the currently supported extension fields:
 
 Submitting schemas directly to olpat is not possible anymore, and all JSON schemas should be submitted to the [JSON Schema Store](https://www.schemastore.org/json/).
 
-In earlier versions, schemas had several limitations and had to be specifically written for olpat. For this reason a separate catalog was used that is still available [here](https://taplo.tamasfe.dev/schema_index.json).
+In earlier versions, schemas had several limitations and had to be specifically written for olpat. For this reason a separate catalog was used that is still available [here](https://docs.olpat.eu/schema_index.json).
 
 ### Visual Studio Code extensions
 

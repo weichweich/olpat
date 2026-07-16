@@ -1,3 +1,5 @@
-Core utilities and types for Taplo, not intended for standalone use.
+Core utilities and types for Olpat, not intended for standalone use.
 
-All the documentation and information is available on the [website](https://taplo.tamasfe.dev).
+All the documentation and information is available on the [website](https://docs.olpat.eu).
+
+This is a fork of [Taplo](https://taplo.tamasfe.dev/)

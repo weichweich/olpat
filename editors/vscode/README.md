@@ -1,6 +1,6 @@
 
 
-A TOML language support extension backed by [Taplo](https://taplo.tamasfe.dev).
+A TOML language support extension backed by [Olpat](https://docs.olpat.eu).
 
 It is currently a **preview extension**, it might contain bugs, or might even crash. If you encounter any issues, please report them [on github](https://github.com/weichweich/olpat/issues).
 
@@ -115,7 +115,7 @@ There is support for completion, hover text, links and validation.
 
 Schemas can be associated with document URIs with the `evenBetterToml.schema.associations` configuration.
 
-You can provide your own schemas or use existing schemas from the [JSON Schema Store](https://www.schemastore.org/json/). More details [here](https://taplo.tamasfe.dev/configuration/using-schemas.html#using-schemas).
+You can provide your own schemas or use existing schemas from the [JSON Schema Store](https://www.schemastore.org/json/). More details [here](https://docs.olpat.eu/configuration/using-schemas.html#using-schemas).
 
 ![Schema](images/schema.gif)
 
@@ -125,7 +125,7 @@ The extension provides commands for easy JSON<->TOML conversions.
 
 # Configuration File
 
-Taplo CLI's [configuration file](https://taplo.tamasfe.dev/configuration/file) is supported and automatically found in workspace roots, or can be manually set in the VS Code configuration.
+Taplo CLI's [configuration file](https://docs.olpat.eu/configuration/file) is supported and automatically found in workspace roots, or can be manually set in the VS Code configuration.
 
 # Special Thanks
 

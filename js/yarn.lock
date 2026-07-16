@@ -243,6 +243,81 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@olpat/cli@workspace:cli":
+  version: 0.0.0-use.local
+  resolution: "@olpat/cli@workspace:cli"
+  dependencies:
+    "@olpat/core": "npm:^0.2.0"
+    "@rollup/plugin-commonjs": "npm:^25.0.7"
+    "@rollup/plugin-node-resolve": "npm:^15.2.3"
+    "@rollup/plugin-typescript": "npm:^12.1.1"
+    "@types/node": "npm:^20.11.9"
+    "@types/node-fetch": "npm:^2.6.11"
+    "@wasm-tool/rollup-plugin-rust": "npm:^2.4.5"
+    esbuild: "npm:^0.20.0"
+    fast-glob: "npm:^3.3.2"
+    node-fetch: "npm:^3.3.2"
+    rollup: "npm:^4.9.6"
+    rollup-plugin-esbuild: "npm:^6.1.1"
+    tslib: "npm:^2.6.2"
+    typescript: "npm:^5.3.3"
+  bin:
+    olpat: dist/cli.js
+  languageName: unknown
+  linkType: soft
+
+"@olpat/core@npm:^0.2.0, @olpat/core@workspace:core":
+  version: 0.0.0-use.local
+  resolution: "@olpat/core@workspace:core"
+  dependencies:
+    "@rollup/plugin-commonjs": "npm:^25.0.7"
+    "@rollup/plugin-node-resolve": "npm:^15.2.3"
+    "@rollup/plugin-typescript": "npm:^12.1.1"
+    "@types/node": "npm:^20.11.9"
+    esbuild: "npm:^0.20.0"
+    rollup: "npm:^4.9.6"
+    rollup-plugin-esbuild: "npm:^6.1.1"
+    tslib: "npm:^2.6.2"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
+"@olpat/lib@workspace:lib":
+  version: 0.0.0-use.local
+  resolution: "@olpat/lib@workspace:lib"
+  dependencies:
+    "@olpat/core": "npm:^0.2.0"
+    "@rollup/plugin-commonjs": "npm:^25.0.7"
+    "@rollup/plugin-node-resolve": "npm:^15.2.3"
+    "@rollup/plugin-typescript": "npm:^12.1.1"
+    "@types/node": "npm:^20.11.9"
+    "@wasm-tool/rollup-plugin-rust": "npm:^2.4.5"
+    esbuild: "npm:^0.20.0"
+    rollup: "npm:^4.9.6"
+    rollup-plugin-esbuild: "npm:^6.1.1"
+    tslib: "npm:^2.6.2"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
+"@olpat/lsp@workspace:lsp":
+  version: 0.0.0-use.local
+  resolution: "@olpat/lsp@workspace:lsp"
+  dependencies:
+    "@olpat/core": "npm:^0.2.0"
+    "@rollup/plugin-commonjs": "npm:^25.0.7"
+    "@rollup/plugin-node-resolve": "npm:^15.2.3"
+    "@rollup/plugin-typescript": "npm:^12.1.1"
+    "@types/node": "npm:^20.11.9"
+    "@wasm-tool/rollup-plugin-rust": "npm:^2.4.5"
+    esbuild: "npm:^0.20.0"
+    rollup: "npm:^4.9.6"
+    rollup-plugin-esbuild: "npm:^6.1.1"
+    tslib: "npm:^2.6.2"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -429,81 +504,6 @@ __metadata:
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
-
-"@olpat/cli@workspace:cli":
-  version: 0.0.0-use.local
-  resolution: "@olpat/cli@workspace:cli"
-  dependencies:
-    "@rollup/plugin-commonjs": "npm:^25.0.7"
-    "@rollup/plugin-node-resolve": "npm:^15.2.3"
-    "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@olpat/core": "npm:^0.2.0"
-    "@types/node": "npm:^20.11.9"
-    "@types/node-fetch": "npm:^2.6.11"
-    "@wasm-tool/rollup-plugin-rust": "npm:^2.4.5"
-    esbuild: "npm:^0.20.0"
-    fast-glob: "npm:^3.3.2"
-    node-fetch: "npm:^3.3.2"
-    rollup: "npm:^4.9.6"
-    rollup-plugin-esbuild: "npm:^6.1.1"
-    tslib: "npm:^2.6.2"
-    typescript: "npm:^5.3.3"
-  bin:
-    olpat: dist/cli.js
-  languageName: unknown
-  linkType: soft
-
-"@olpat/core@npm:^0.2.0, @olpat/core@workspace:core":
-  version: 0.0.0-use.local
-  resolution: "@olpat/core@workspace:core"
-  dependencies:
-    "@rollup/plugin-commonjs": "npm:^25.0.7"
-    "@rollup/plugin-node-resolve": "npm:^15.2.3"
-    "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@types/node": "npm:^20.11.9"
-    esbuild: "npm:^0.20.0"
-    rollup: "npm:^4.9.6"
-    rollup-plugin-esbuild: "npm:^6.1.1"
-    tslib: "npm:^2.6.2"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
-
-"@olpat/lib@workspace:lib":
-  version: 0.0.0-use.local
-  resolution: "@olpat/lib@workspace:lib"
-  dependencies:
-    "@rollup/plugin-commonjs": "npm:^25.0.7"
-    "@rollup/plugin-node-resolve": "npm:^15.2.3"
-    "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@olpat/core": "npm:^0.2.0"
-    "@types/node": "npm:^20.11.9"
-    "@wasm-tool/rollup-plugin-rust": "npm:^2.4.5"
-    esbuild: "npm:^0.20.0"
-    rollup: "npm:^4.9.6"
-    rollup-plugin-esbuild: "npm:^6.1.1"
-    tslib: "npm:^2.6.2"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
-
-"@olpat/lsp@workspace:lsp":
-  version: 0.0.0-use.local
-  resolution: "@olpat/lsp@workspace:lsp"
-  dependencies:
-    "@rollup/plugin-commonjs": "npm:^25.0.7"
-    "@rollup/plugin-node-resolve": "npm:^15.2.3"
-    "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@olpat/core": "npm:^0.2.0"
-    "@types/node": "npm:^20.11.9"
-    "@wasm-tool/rollup-plugin-rust": "npm:^2.4.5"
-    esbuild: "npm:^0.20.0"
-    rollup: "npm:^4.9.6"
-    rollup-plugin-esbuild: "npm:^6.1.1"
-    tslib: "npm:^2.6.2"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
 
 "@types/estree@npm:*, @types/estree@npm:1.0.5, @types/estree@npm:^1.0.0":
   version: 1.0.5

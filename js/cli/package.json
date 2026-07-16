@@ -20,10 +20,10 @@
     "enabled": true
   },
   "devDependencies": {
+    "@olpat/core": "^0.2.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^12.1.1",
-    "@olpat/core": "^0.2.0",
     "@types/node": "^20.11.9",
     "@types/node-fetch": "^2.6.11",
     "@wasm-tool/rollup-plugin-rust": "^2.4.5",

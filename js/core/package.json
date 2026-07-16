@@ -1,10 +1,10 @@
 {
   "name": "@olpat/core",
   "version": "0.2.0",
-  "description": "Commonly used types for Taplo",
+  "description": "Commonly used types for Olpat",
   "author": {
-    "name": "tamasfe",
-    "url": "https://github.com/tamasfe"
+    "name": "weichweich",
+    "url": "https://github.com/weichweich"
   },
   "scripts": {
     "build": "yarn rollup --silent -c rollup.config.mjs",
