@@ -10,7 +10,6 @@ webpack.config.*
 tsconfig.json
 tslint.json
 sample
-images
 node_modules
 .yarn/**
 .yarnrc.yml
