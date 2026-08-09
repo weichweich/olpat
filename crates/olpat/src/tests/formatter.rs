@@ -1,10 +1,13 @@
-use similar::TextDiff;
 use crate::formatter::{self, Options, OptionsIncomplete};
+use similar::TextDiff;
 
 macro_rules! assert_format {
     ($expected:expr, $actual:expr) => {
         if $expected != $actual {
-            println!("{}", TextDiff::from_lines($actual, $expected).unified_diff());
+            println!(
+                "{}",
+                TextDiff::from_lines($actual, $expected).unified_diff()
+            );
             panic!("invalid formatting");
         }
     };
