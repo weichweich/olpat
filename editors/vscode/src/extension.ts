@@ -27,7 +27,7 @@ export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     getOutput(),
     schemaIndicator,
-    c.onNotification("taplo/messageWithOutput", async params =>
+    c.onNotification("olpat-ext/messageWithOutput", async params =>
       showMessage(params, c)
     ),
     vscode.window.onDidChangeActiveTextEditor(editor => {
@@ -38,7 +38,7 @@ export async function activate(context: vscode.ExtensionContext) {
       }
     }),
     c.onNotification(
-      "taplo/didChangeSchemaAssociation",
+      "olpat-ext/didChangeSchemaAssociation",
       async (params: {
         documentUri: string;
         schemaUri?: string;

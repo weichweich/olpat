@@ -21,7 +21,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
         }
 
         const res = await c.sendRequest<{ text?: string; error?: string }>(
-          "taplo/convertToJson",
+          "olpat-extP/convertToJson",
           {
             text: selectedText,
           }
@@ -89,7 +89,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
         }
 
         const res = await c.sendRequest<{ text?: string; error?: string }>(
-          "taplo/convertToToml",
+          "olpat-ext/convertToToml",
           {
             text: selectedText,
           }
@@ -162,7 +162,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
         }
 
         const res = await c.sendRequest<{ text?: string; error?: string }>(
-          "taplo/convertToJson",
+          "olpat-ext/convertToJson",
           {
             text: input,
           }
@@ -208,7 +208,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
         }
 
         const res = await c.sendRequest<{ text?: string; error?: string }>(
-          "taplo/convertToToml",
+          "olpat-ext/convertToToml",
           {
             text: input,
           }
