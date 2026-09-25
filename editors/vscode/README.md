@@ -113,7 +113,7 @@ The formatter is rather conservative by default, additional features can be enab
 
 There is support for completion, hover text, links and validation.
 
-Schemas can be associated with document URIs with the `evenBetterToml.schema.associations` configuration.
+Schemas can be associated with document URIs with the `olpat-ext.schema.associations` configuration.
 
 You can provide your own schemas or use existing schemas from the [JSON Schema Store](https://www.schemastore.org/json/). More details [here](https://docs.olpat.eu/configuration/using-schemas.html#using-schemas).
 
@@ -125,7 +125,7 @@ The extension provides commands for easy JSON<->TOML conversions.
 
 # Configuration File
 
-Taplo CLI's [configuration file](https://docs.olpat.eu/configuration/file) is supported and automatically found in workspace roots, or can be manually set in the VS Code configuration.
+Olpat's [configuration file](https://docs.olpat.eu/configuration/file) is supported and automatically found in workspace roots, or can be manually set in the VS Code configuration.
 
 # Special Thanks
 

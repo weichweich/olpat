@@ -3,6 +3,7 @@ use futures::Sink;
 use js_sys::Function;
 use olpat_lsp::world::WorldState;
 use olpat_lsp_async_stub::{rpc, Server};
+use serde::Serialize;
 use std::{io, sync::Arc};
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::spawn_local;
@@ -63,8 +64,11 @@ impl Sink<rpc::Message> for WasmLspInterface {
         message: rpc::Message,
     ) -> Result<(), Self::Error> {
         let this = JsValue::null();
+        // Serialize maps as plain objects so nested `serde_json::Value` payloads
+        // (e.g. `result`/`params`) survive JSON-based IPC instead of becoming `{}`.
+        let serializer = serde_wasm_bindgen::Serializer::json_compatible();
         self.js_on_message
-            .call1(&this, &serde_wasm_bindgen::to_value(&message).unwrap())
+            .call1(&this, &message.serialize(&serializer).unwrap())
             .unwrap();
         Ok(())
     }

@@ -17,7 +17,7 @@
     "name": "weichweich"
   },
   "preview": true,
-  "icon": "olpat-icon.png",
+  "icon": "images/olpat-icon.png",
   "galleryBanner": {
     "color": "#731c12",
     "theme": "dark"
@@ -406,13 +406,17 @@
     "build": "node scripts/build.mjs"
   },
   "dependencies": {
-    "@olpat/lsp": "^0.8.0",
+    "@olpat/lsp": "^0.8.1",
     "deep-equal": "^2.2.3",
     "encoding": "^0.1.13",
     "fast-glob": "^3.3.2",
     "node-fetch": "^3.3.2",
     "vscode-languageclient": "^9.0.1",
     "which": "^5.0.0"
+  },
+  "resolutions": {
+    "@olpat/lsp": "portal:../../js/lsp",
+    "@olpat/core": "portal:../../js/core"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -429,5 +433,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.18.0",
+  "vsce": {
+    "dependencies": true,
+    "yarn": false
+  }
 }
