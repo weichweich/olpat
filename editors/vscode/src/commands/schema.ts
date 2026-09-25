@@ -11,7 +11,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
         }
 
         const schemasResp: { schemas: { url: string; meta?: any }[] } =
-          await c.sendRequest("olpat-ext/listSchemas", {
+          await c.sendRequest("taplo/listSchemas", {
             documentUri: editor.document.uri.toString(),
           });
 
@@ -21,7 +21,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
         }
 
         const selectedSchema: { schema?: { url: string } } =
-          await c.sendRequest("olpat-ext/associatedSchema", {
+          await c.sendRequest("taplo/associatedSchema", {
             documentUri: editor.document.uri.toString(),
           });
 
@@ -40,7 +40,7 @@ export function register(ctx: vscode.ExtensionContext, c: BaseLanguageClient) {
           return;
         }
 
-        c.sendNotification("olpat-ext/associateSchema", {
+        c.sendNotification("taplo/associateSchema", {
           documentUri: editor.document.uri.toString(),
           schemaUri: selection.url,
           rule: {
